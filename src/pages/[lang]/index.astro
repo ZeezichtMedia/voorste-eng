@@ -44,14 +44,10 @@ const title = {
                     <div class="relative aspect-[3/4] max-w-sm mx-auto md:mx-0 shadow-xl rounded-sm overflow-hidden">
                         <img 
                             src="/images/wildlife_cows.png" 
-                            alt="Gea - Uw Gastvrouw" 
+                            alt="Boerderij Voorste Eng" 
                             class="w-full h-full object-cover scale-105 hover:scale-100 transition-transform duration-1000"
                         />
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-                        <div class="absolute bottom-8 left-8 text-white">
-                            <div class="font-heading text-3xl">Gea</div>
-                            <div class="text-sm uppercase tracking-widest opacity-80">{lang === 'nl' ? 'Uw Gastvrouw' : 'Your Host'}</div>
-                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     </div>
                 </ScrollReveal>
                 <!-- Decorative element behind -->
@@ -69,7 +65,14 @@ const title = {
                         lang === 'de' ? 'Genießen Sie Ruhe und Weite in unserem renovierten Bauernhof. Mit der Hoge Veluwe als Hinterhof geben wir Ihnen gerne die besten Tipps für einen entspannten Aufenthalt in der Natur.' : 
                         'Enjoy peace and space in our renovated farmhouse. With the Hoge Veluwe as our backyard, we are happy to give you the best tips for a relaxing stay in nature.'}"
                     </p>
-                    <div class="w-24 h-[1px] bg-bordeaux/30"></div>
+                    <div class="w-24 h-[1px] bg-bordeaux/30 mb-6"></div>
+                    <!-- Quote attribution -->
+                    <div class="flex items-center gap-3">
+                        <div>
+                            <div class="font-heading text-lg text-bordeaux">Gea</div>
+                            <div class="text-xs uppercase tracking-widest text-stone-400">{lang === 'nl' ? 'Uw gastvrouw' : lang === 'de' ? 'Ihre Gastgeberin' : 'Your Host'}</div>
+                        </div>
+                    </div>
                 </ScrollReveal>
             </div>
         </div>
