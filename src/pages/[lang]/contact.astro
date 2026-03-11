@@ -24,7 +24,7 @@ const content = {
     addressTitle: "Locatie",
     address: "Edeseweg 2, 6731 AP Otterlo, Nederland",
     contactTitle: "Direct Contact",
-    phone: "+31 (0)6 1234 5678",
+    phone: "06-46353529",
     emailContact: "info@voorste-eng.nl"
   },
   en: {
@@ -38,7 +38,7 @@ const content = {
     addressTitle: "Location",
     address: "Edeseweg 2, 6731 AP Otterlo, The Netherlands",
     contactTitle: "Direct Contact",
-    phone: "+31 (0)6 1234 5678",
+    phone: "06-46353529",
     emailContact: "info@voorste-eng.nl"
   },
   de: {
@@ -52,7 +52,7 @@ const content = {
     addressTitle: "Standort",
     address: "Edeseweg 2, 6731 AP Otterlo, Niederlande",
     contactTitle: "Direkter Kontakt",
-    phone: "+31 (0)6 1234 5678",
+    phone: "06-46353529",
     emailContact: "info@voorste-eng.nl"
   }
 };
@@ -106,8 +106,8 @@ const t = content[lang] || content.nl;
                             <div>
                                 <h3 class="font-heading text-xl text-slate-900 mb-2">{t.contactTitle}</h3>
                                 <div class="space-y-1">
-                                    <p class="text-slate-600 font-light">{t.phone}</p>
-                                    <p class="text-slate-600 font-light">{t.emailContact}</p>
+                                    <p class="text-slate-600 font-light"><a href="tel:+31646353529" class="hover:text-bordeaux transition-colors">{t.phone}</a></p>
+                                    <p class="text-slate-600 font-light"><a href="mailto:{t.emailContact}" class="hover:text-bordeaux transition-colors">{t.emailContact}</a></p>
                                 </div>
                             </div>
                         </div>

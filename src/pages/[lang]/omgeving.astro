@@ -18,287 +18,362 @@ const content = {
     title: "Omgeving",
     headline: "Ontdek Otterlo & De Veluwe",
     description: "Otterlo is de parel van de Veluwe. Boerderij Voorste Eng vormt de ideale uitvalsbasis om de prachtige natuur, cultuur en historie van Gelderland te verkennen.",
-    labels: {
-      natuur: "Natuur",
-      cultuur: "Cultuur",
-      dining: "Eten & Drinken",
-      highlights: "Highlights"
+    history: {
+      title: "Boerderij thee schenkerij de Mossel",
+      image: "/images/omgeving/Boerderij-de-Mossel-Otterlo-restaurant-ginkel-m.jpg",
+      paragraphs: [
+        "De naam “Mosschel” komt al op kaarten uit de vijftiende eeuw voor, de naam herinnert aan de plaggenhutjes van mos waar rondtrekkende herders in de zomer verblijven.",
+        "In 1938 is opa Prangsma hier komen wonen, oma volgt een paar jaar later. Opa is boer en heeft de gronden rondom Mossel ontgonnen, terwijl oma na de oorlog een theeschenkerij met terras start, voor voorbijgangers en vakantiegasten. De boerderij wordt in de zomermaanden verhuurd aan pensiongasten voor wie oma driemaal daags de maaltijd verzorgt. In 1973 nemen Piet en Valentine Prangsma de boerderij en theeschenkerij over. In de jaren ’80 verandert het pension in een groepsaccommodatie, in 1996 stoppen de agrarische werkzaamheden en gaan de akkers terug naar de natuur.",
+        "In 2011 neemt de derde generatie het bedrijf over: Chantal en Danny Prangsma zetten de familietraditie voort. De boerderij wordt in 2012 verbouwd tot een moderne groepsaccommodatie, het bakhuis wordt toiletgebouw, en de oude “pensionkeuken” wordt verbouwd tot horeca keuken.",
+        "Op 8 augustus 2016 gaat de oude, karakteristieke, schaapskooi door een enorme brand verloren. Gelukkig weet de brandweer verder verlies te voorkomen. In mei 2019 is de opening van de nieuwe schaapskooi, op dezelfde plek als de oude, maar met alle comfort van de huidige tijd. Een prachtig pand, met veel ramen wat uitzicht geeft op de omliggende natuur. Op de begane grond bevindt zich de theeschenkerij, op de bovenverdieping is een aparte ruimte voor vergaderingen, trainingen of besloten lunches gerealiseerd. De schaapskooi is het gehele jaar geopend, in alle jaargetijden is het er goed toeven. De horecakeuken wordt naar de nieuwe schaapskooi verplaatst, waardoor de oude keuken een nieuwe bestemming krijgt: appartement “De Oude Keuken”. Samen met de groepsaccommodatie en de pipowagen kunnen onze gasten zowel overdag als ’s nachts van dit unieke plekje op de Veluwe genieten!"
+      ]
     },
-    spotsTitle: "Hotspots",
-    spots: [
-      { 
-        title: "Nationaal Park De Hoge Veluwe", 
-        desc: "5.400 hectare natuur met bossen, heide en zandverstuivingen. Perfect voor wandelen, fietsen en wild spotten vlak bij Otterlo.", 
-        img: "/images/hoge_veluwe_park.png",
-        link: "https://www.hogeveluwe.nl"
-      },
-      { 
-        title: "Cèpes", 
-        desc: "Culinair genieten met lokale en seizoensgebonden producten in Restaurant Cèpes bij Hotel de Sterrenberg.", 
-        img: "/images/cepes.jpg",
-        link: "https://cepes.nl/",
-        category: "Eten & Drinken"
-      },
-      { 
-        title: "Museonder", 
-        desc: "Het eerste ondergrondse museum ter wereld, midden in Nationaal Park De Hoge Veluwe. Ontdek wat er onder de grond leeft en leefde op de Veluwe.", 
-        img: "/images/museonder.webp",
-        link: "https://hogeveluwe.nl/plan-je-bezoek/beleef-het-park/museonder",
-        category: "Cultuur"
-      },
-      { 
-        title: "Kröller-Müller Museum", 
-        desc: "Museum midden in De Hoge Veluwe met een van de grootste Van Gogh-collecties ter wereld en een indrukwekkende beeldentuin.", 
-        img: "/images/kroller_muller.jpeg",
-        link: "https://krollermuller.nl",
-        category: "Cultuur"
-      },
-      { 
-        title: "Planken Wambuis", 
-        desc: "Uitgestrekt natuurgebied met heidevelden, bossen en grote kans om edelherten of wilde zwijnen te zien.", 
-        img: "/images/planken_wambuis.jpg",
-        link: "https://www.natuurmonumenten.nl/natuurgebieden/planken-wambuis",
-        category: "Highlights"
-      },
-      {
-        title: "De Waldhoorn",
-        desc: "Gezellig restaurant in het centrum van Otterlo voor lunch, diner of een drankje na een dag op de Veluwe.",
-        img: "/images/de_waldhoorn.jpg",
-        link: "https://www.de-waldhoorn.nl",
-        category: "Eten & Drinken"
-      }
-    ],
+    sections: {
+      dining: "Eten & Drinken",
+      icecream: "IJstips!",
+      sights: "Activiteiten & Bezienswaardigheden",
+      walking: "Wandeltips rond Otterlo",
+      surroundings: "Omgeving (Verder weg)"
+    },
     dining: [
-      { name: "Grand Café Kröller", desc: "Heerlijke lunch of diner in hartje Otterlo.", img: "/images/restaurant_farmhouse.png" },
-      { name: "Carnegie Cottage", desc: "Sfeervol restaurant met terras en authentieke uitstraling.", img: "/images/restaurant_fine.png" }
+      { title: "Eten bij Koe", desc: "Welkom bij KOE, een unieke horecaervaring in Otterlo. In een in stijl gerenoveerde koeienstal op Hoeve Boer & Bleek bevindt zich sinds 2024 KOE: een gezellige horecagelegenheid omringd door wei en bos.", img: "/images/omgeving/eten bij koe.jpg" },
+      { title: "Brasserie Otterlo", desc: "Gelegen in hartje Otterlo, de ideale hotspot voor een verse kop koffie, lunch of diner. Onze chefs geven Bourgondische Franse gerechten een moderne draai.", img: "/images/omgeving/brasserie otterlo.jpeg" },
+      { title: "Eetcafé de Driester", desc: "Sinds 1997 een begrip in het dorp, gelegen naast de kerk. Typisch Hollandse kaart voor lunch en diner, waar kwaliteit en gezelligheid voorop staan.", img: "/images/omgeving/de-3-ster.jpg" },
+      { title: "Restaurant de Waldhoorn", desc: "Historische ontmoetingsplek met meerdere terrassen en binnentuin. Ongedwongen genieten op het terras, zomer en winter.", img: "/images/de_waldhoorn.jpg" },
+      { title: "Restaurant Cèpes", desc: "Een unieke culinaire ervaring, geworteld in onze passie voor lokale, seizoensgebonden ingrediënten van de Veluwe.", img: "/images/cepes.jpg" },
+      { title: "De Wever Lodge", desc: "Met een goed glas wijn aan de bar van de Bistro voel je je al snel thuis. Ambachtelijke gerechten gemaakt met seizoensgebonden ingrediënten.", img: "/images/omgeving/de wever lodge.jpg" },
+      { title: "Brasserie Roekel", desc: "Gelegen midden in natuurgebied de Mossel. Dé perfecte pitstop tijdens je wandeling of fietstocht, met uitzicht op de natuur.", img: "/images/omgeving/brasserie roekel.jpg" },
+      { title: "‘T Smulhuis", desc: "Gezelligheid en genieten staat centraal. Ons restaurant biedt gerechten met inspiratie uit zowel de Aziatische als de Westerse keuken.", img: "/images/omgeving/smulhuis.jpg" }
+    ],
+    icecream: [
+      { title: "IJs van Co Hoenderloo", desc: "De traditie van ons ambachtelijke vanille-ijs bestaat al meer dan 75 jaar. Dagelijks vers vanille schepijs voor de verkoop aan ons ijs-loket.", img: "/images/omgeving/ijs-van-co.png" },
+      { title: "IJssalon PURO Ede", desc: "Puur genieten met authentiek bereid ijs vanuit onze Cattabriga Effe6 bokvriezers. Gemaakt met de verste en lekkerste ingrediënten.", img: "/images/omgeving/puro-ede.png" },
+      { title: "IJssalon Bernado’s Ede", desc: "Al jaren bekend in Ede, met wel meer dan 80 smaken ambachtelijk en dagelijks vers gemaakt ijs. Ook speciaal ijs voor diabetici en allergieën.", img: "/images/omgeving/bernados-ede.png" }
     ],
     sights: [
-      { name: "Nederlands Tegelmuseum", desc: "Unieke collectie historische Nederlandse wandtegels.", img: "/images/tile_museum.png" },
-      { name: "Radio Kootwijk", desc: "Imposant zendstation in art-deco stijl midden op de heide.", img: "/images/radio_kootwijk.png" },
-      { name: "Uitkijktoren De Valouwe", desc: "Spectaculair uitzicht over de boomtoppen van de Veluwe.", img: "/images/observation_tower.png" }
+      { title: "Nationaal Park de Hoge Veluwe", desc: "Eén van de mooiste natuurgebieden van Nederland, perfect om wandelend, met de fiets of auto te verkennen.", img: "/images/hoge_veluwe_park.png", link: "https://www.hogeveluwe.nl" },
+      { title: "Jachthuis Sint Hubertus", desc: "Het voormalige buitenverblijf van het echtpaar Kröller-Müller, en één van de meest iconische gebouwen van Nederland, ontworpen door Berlage.", img: "/images/omgeving/jachthuis sint hubertus.jpg" },
+      { title: "Museonder", desc: "Het eerste ondergrondse museum ter wereld in het centrum van het Park. Ontdek wat er onder de grond leeft en leefde op de Veluwe.", img: "/images/museonder.webp", link: "https://hogeveluwe.nl/plan-je-bezoek/beleef-het-park/museonder" },
+      { title: "Kröller-Müller Museum", desc: "De mooiste Van Goghverzameling ter wereld, inclusief topstukken van moderne meesters en een uitgestrekte indrukwekkende beeldentuin.", img: "/images/kroller_muller.jpeg", link: "https://krollermuller.nl" },
+      { title: "Nederlands Tegelmuseum", desc: "De grootste en meest veelzijdige collectie Nederlandse wandtegels vanaf de late Middeleeuwen, historisch belangrijk voor Nederlands design.", img: "/images/omgeving/nederlands-tegelmuseum-rasbak-wikipedia-cc30.jpg" }
     ],
-    activities: [
-      { name: "Het Mosselsche Zand", desc: "Prachtige zandverstuiving om eindeloos te wandelen.", img: "/images/sand_drift.png" },
-      { name: "Zandverstuiving De Zanding", desc: "Natuurgebied direct aan de rand van Otterlo.", img: "/images/sand_drift.png" },
-      { name: "Belevenispad 't Eekhoorntje", desc: "Leuke wandelroute voor kinderen door het bos.", img: "/images/adventure_path.png" }
-    ]
+    walking: [
+      { title: "Hoge zandbergen en heide", desc: "Indrukwekkende stuifwal met aan de ene kant bebossing en de andere kant heide en mossen. Prachtig wandelgebied net buiten Otterlo.", img: "/images/omgeving/Hoge zandbergen en heide.jpg" },
+      { title: "Big 5 wandelroute & Eeskooterpad", desc: "Wandelroutes die over de zandberg lopen, met verspreid over de Big 5 route houten standbeelden van wilde Veluwse dieren.", img: "/images/omgeving/houten-hert-oterlo-big-5-visit-otterlo-5-high.webp" },
+      { title: "Wandeltip gemeente Ede", desc: "Bekijk de specifieke route van Otterlo, Mossel en Roekel via de wandelblog van de gemeente Ede.", img: "/images/planken_wambuis.jpg", link: "https://www.wandeleninede.nl/blog/otterlo-mossel-roekel" }
+    ],
+    surroundings: [
+      { title: "Paleis het Loo Apeldoorn", desc: "Origineel 17e-eeuws paleis van het Huis van Oranje. Bewonder de ingerichte vertrekken, indrukwekkende tuinen en de koninklijke stallen.", img: "/images/omgeving/paleis het loo.webp", link: "https://paleishetloo.nl/" },
+      { title: "Het Nederlands openluchtmuseum Arnhem", desc: "Geschiedenis kun je hier van alle kanten bekijken. Adembenemende gebouwen, voorwerpen en verhalen van wel vierhonderd jaar oud uit heel Nederland.", img: "/images/omgeving/nederlands openlucht museum.jpg", link: "https://openluchtmuseum.nl/" }
+    ],
+    readMore: "Lees meer",
+    discover: "Ontdekken"
   },
   en: {
     title: "Surroundings",
     headline: "Discover Otterlo & The Veluwe",
     description: "Otterlo is the pearl of the Veluwe. Boerderij Voorste Eng is the ideal base for exploring the beautiful nature, culture, and history of Gelderland.",
-    labels: {
-      natuur: "Nature",
-      cultuur: "Culture",
-      dining: "Dining & Drinks",
-      highlights: "Highlights"
+    history: {
+      title: "Farm & Tea Room De Mossel",
+      image: "/images/omgeving/Boerderij-de-Mossel-Otterlo-restaurant-ginkel-m.jpg",
+      paragraphs: [
+        "The name 'Mosschel' appears on maps dating back to the 15th century, a reminder of the moss sod huts where traveling shepherds stayed during the summer.",
+        "In 1938, grandfather Prangsma came to live here, followed a few years later by grandmother. Grandfather was a farmer who cultivated the land around Mossel, while grandmother started a tea room with a terrace after the war for passersby and holiday guests. The farm was rented out to boarding guests during the summer months, for whom grandmother provided three meals a day. In 1973, Piet and Valentine Prangsma took over the farm and tea room. In the 1980s, the boarding house turned into group accommodation, and in 1996 agricultural activities ceased, allowing the fields to return to nature.",
+        "In 2011, the third generation took over the business: Chantal and Danny Prangsma continued the family tradition. The farm was renovated in 2012 into modern group accommodation, the bakehouse became a sanitary building, and the old 'boarding kitchen' was renovated into a catering kitchen.",
+        "On August 8, 2016, the old, characteristic sheepfold was lost in a massive fire. Fortunately, the fire department prevented further loss. In May 2019, the new sheepfold opened on the exact same spot, but with all the comforts of modern times. A beautiful building with many windows offering views of the surrounding nature. The tea room is located on the ground floor, and a separate room for meetings, training, or private lunches has been realized on the upper floor. The sheepfold is open all year round, a wonderful place to stay in all seasons. The catering kitchen was moved to the new sheepfold, giving the old kitchen a new purpose: apartment 'De Oude Keuken'. Together with the group accommodation and the gypsy wagon, our guests can enjoy this unique spot on the Veluwe both day and night!"
+      ]
     },
-    sectionTitleDining: "Culinary Delights",
-    sectionTitleSights: "Culture & Sightseeing",
-    sectionTitleAction: "Active & Nature",
-    spotsTitle: "Hotspots",
-    spots: [
-      { 
-        title: "National Park De Hoge Veluwe", 
-        desc: "5,400 hectares of nature with forests, heathlands, and sand drifts. Perfect for walking, cycling, and spotting wildlife close to Otterlo.", 
-        img: "/images/hoge_veluwe_park.png",
-        link: "https://www.hogeveluwe.nl/en"
-      },
-      { 
-        title: "Cèpes", 
-        desc: "Culinary enjoyment with local and seasonal products at Restaurant Cèpes near Hotel de Sterrenberg.", 
-        img: "/images/cepes.jpg",
-        link: "https://cepes.nl/",
-        category: "Dining & Drinks"
-      },
-      { 
-        title: "Museonder", 
-        desc: "The first underground museum in the world, located in the middle of National Park De Hoge Veluwe. Discover what lives and lived underground on the Veluwe.", 
-        img: "/images/museonder.webp",
-        link: "https://hogeveluwe.nl/plan-je-bezoek/beleef-het-park/museonder",
-        category: "Culture"
-      },
-      { 
-        title: "Kröller-Müller Museum", 
-        desc: "Museum located in the middle of De Hoge Veluwe with one of the largest Van Gogh collections in the world and an impressive sculpture garden.", 
-        img: "/images/kroller_muller.jpeg",
-        link: "https://krollermuller.nl/en",
-        category: "Culture"
-      },
-      { 
-        title: "Planken Wambuis", 
-        desc: "Extensive nature reserve with heathlands, forests, and a high chance of spotting red deer or wild boars.", 
-        img: "/images/planken_wambuis.jpg",
-        link: "https://www.natuurmonumenten.nl/natuurgebieden/planken-wambuis",
-        category: "Highlights"
-      },
-      {
-        title: "De Waldhoorn",
-        desc: "Cozy restaurant in the center of Otterlo for lunch, dinner, or a drink after a day on the Veluwe.",
-        img: "/images/de_waldhoorn.jpg",
-        link: "https://www.de-waldhoorn.nl/en/",
-        category: "Dining & Drinks"
-      }
-    ],
+    sections: {
+      dining: "Dining & Drinks",
+      icecream: "Ice Cream Spots!",
+      sights: "Activities & Sightseeing",
+      walking: "Walking tips around Otterlo",
+      surroundings: "Surroundings (Further afield)"
+    },
     dining: [
-      { name: "Grand Café Kröller", desc: "Delicious lunch or dinner in the heart of Otterlo.", img: "/images/restaurant_farmhouse.png" },
-      { name: "Carnegie Cottage", desc: "Atmospheric restaurant with terrace.", img: "/images/restaurant_fine.png" }
+      { title: "Dining at Koe", desc: "Welcome to KOE, a unique dining experience in Otterlo. Located in a stylishly renovated cowshed at Hoeve Boer & Bleek, KOE offers a cozy venue surrounded by meadows and forests.", img: "/images/omgeving/eten bij koe.jpg" },
+      { title: "Brasserie Otterlo", desc: "Located in the heart of Otterlo, the ideal hotspot for a fresh cup of coffee, lunch, or dinner. Our chefs give Burgundian French dishes a modern twist.", img: "/images/omgeving/brasserie otterlo.jpeg" },
+      { title: "Eetcafé de Driester", desc: "A staple in the village since 1997, located next to the church. Typical Dutch menu for lunch and dinner, where quality and coziness are paramount.", img: "/images/omgeving/de-3-ster.jpg" },
+      { title: "Restaurant de Waldhoorn", desc: "Historical meeting place with multiple terraces and a courtyard. Casual enjoyment on the terrace, summer and winter.", img: "/images/de_waldhoorn.jpg" },
+      { title: "Restaurant Cèpes", desc: "A unique culinary experience rooted in our passion for local, seasonal ingredients from the Veluwe.", img: "/images/cepes.jpg" },
+      { title: "De Wever Lodge", desc: "With a good glass of wine at the Bistro bar, you quickly feel at home. Artisanal dishes made with seasonal ingredients.", img: "/images/omgeving/de wever lodge.jpg" },
+      { title: "Brasserie Roekel", desc: "Located in the middle of the Mossel nature reserve. The perfect pit stop during your walk or bike ride, with views of nature.", img: "/images/omgeving/brasserie roekel.jpg" },
+      { title: "‘T Smulhuis", desc: "Hospitality and enjoyment are central here. Our restaurant offers dishes inspired by both Asian and Western cuisine.", img: "/images/omgeving/smulhuis.jpg" }
+    ],
+    icecream: [
+      { title: "Ice Cream from Co Hoenderloo", desc: "The tradition of our artisanal vanilla ice cream has existed for over 75 years. Freshly scooped daily at our ice cream counter.", img: "/images/omgeving/ijs-van-co.png" },
+      { title: "Ice Cream Parlor PURO Ede", desc: "Pure enjoyment with authentically prepared ice cream from our Cattabriga Effe6 freezers, made with the freshest ingredients.", img: "/images/omgeving/puro-ede.png" },
+      { title: "Ice Cream Parlor Bernado’s Ede", desc: "Known for years in Ede, with over 80 flavors of artisanal, daily-made fresh ice cream. Also special options for diabetics and allergies.", img: "/images/omgeving/bernados-ede.png" }
     ],
     sights: [
-      { name: "Dutch Tile Museum", desc: "Unique collection of historical Dutch wall tiles.", img: "/images/tile_museum.png" },
-      { name: "Radio Kootwijk", desc: "Impressive art-deco transmitter station in the middle of the heath.", img: "/images/radio_kootwijk.png" },
-      { name: "Watchtower De Valouwe", desc: "Spectacular view over the treetops of the Veluwe.", img: "/images/observation_tower.png" }
+      { title: "National Park De Hoge Veluwe", desc: "One of the most beautiful nature reserves in the Netherlands, perfect for exploring on foot, by bike, or by car.", img: "/images/hoge_veluwe_park.png", link: "https://www.hogeveluwe.nl/en" },
+      { title: "St. Hubertus Hunting Lodge", desc: "The former country residence of the Kröller-Müller couple, and one of the most iconic buildings in the Netherlands, designed by Berlage.", img: "/images/omgeving/jachthuis sint hubertus.jpg" },
+      { title: "Museonder", desc: "The first underground museum in the world in the center of the Park. Discover what lives and lived underground on the Veluwe.", img: "/images/museonder.webp", link: "https://hogeveluwe.nl/plan-je-bezoek/beleef-het-park/museonder" },
+      { title: "Kröller-Müller Museum", desc: "The most beautiful Van Gogh collection in the world, including masterpieces of modern masters and an extensive impressive sculpture garden.", img: "/images/kroller_muller.jpeg", link: "https://krollermuller.nl/en" },
+      { title: "Dutch Tile Museum", desc: "The largest and most versatile collection of Dutch wall tiles from the late Middle Ages, historically important for Dutch design.", img: "/images/omgeving/nederlands-tegelmuseum-rasbak-wikipedia-cc30.jpg" }
     ],
-    activities: [
-      { name: "Het Mosselsche Zand", desc: "Beautiful sand drift for endless walking.", img: "/images/sand_drift.png" },
-      { name: "De Zanding Sand Drift", desc: "Nature area right on the edge of Otterlo.", img: "/images/sand_drift.png" },
-      { name: "Adventure Path 't Eekhoorntje", desc: "Fun walking route for children through the forest.", img: "/images/adventure_path.png" }
-    ]
+    walking: [
+      { title: "High sand dunes and heathland", desc: "Impressive shifting sand dune with woods on one side and heath and mosses on the other. Beautiful walking area just outside Otterlo.", img: "/images/omgeving/Hoge zandbergen en heide.jpg" },
+      { title: "Big 5 walking route & Eeskooterpad", desc: "Walking routes that cross the sand dune, featuring wooden statues of wild Veluwe animals scattered along the Big 5 route.", img: "/images/omgeving/houten-hert-oterlo-big-5-visit-otterlo-5-high.webp" },
+      { title: "Walking tip Ede municipality", desc: "View the specific route for Otterlo, Mossel, and Roekel via the walking blog of the Ede municipality.", img: "/images/planken_wambuis.jpg", link: "https://www.wandeleninede.nl/blog/otterlo-mossel-roekel" }
+    ],
+    surroundings: [
+      { title: "Paleis het Loo Apeldoorn", desc: "Original 17th-century palace of the House of Orange. Admire the furnished rooms, impressive gardens, and the royal stables.", img: "/images/omgeving/paleis het loo.webp", link: "https://paleishetloo.nl/en" },
+      { title: "The Netherlands Open Air Museum Arnhem", desc: "You can view history from all sides here. Breathtaking buildings, objects, and stories up to four hundred years old from all over the Netherlands.", img: "/images/omgeving/nederlands openlucht museum.jpg", link: "https://www.openluchtmuseum.nl/en" }
+    ],
+    readMore: "Read more",
+    discover: "Discover"
   },
   de: {
     title: "Umgebung",
     headline: "Entdecken Sie Otterlo & De Veluwe",
     description: "Otterlo ist die Perle der Veluwe. Boerderij Voorste Eng ist der ideale Ausgangspunkt, um die wunderschöne Natur, Kultur und Geschichte von Gelderland zu erkunden.",
-    labels: {
-      natuur: "Natur",
-      cultuur: "Kultur",
-      dining: "Essen & Trinken",
-      highlights: "Highlights"
+    history: {
+      title: "Bauernhof & Teestube De Mossel",
+      image: "/images/omgeving/Boerderij-de-Mossel-Otterlo-restaurant-ginkel-m.jpg",
+      paragraphs: [
+        "Der Name 'Mosschel' taucht bereits auf Karten aus dem 15. Jahrhundert auf und erinnert an die Mooshütten, in denen umherziehende Hirten im Sommer weilten.",
+        "1938 zog Großvater Prangsma hier ein, gefolgt von der Großmutter ein paar Jahre später. Großvater war Bauer und bewirtschaftete das Land um Mossel, während die Großmutter nach dem Krieg eine Teestube mit Terrasse für Passanten und Feriengäste eröffnete. Der Bauernhof wurde in den Sommermonaten an Pensionsgäste vermietet, für die die Großmutter drei Mahlzeiten am Tag zubereitete. 1973 übernahmen Piet und Valentine Prangsma den Bauernhof und die Teestube. In den 80er Jahren wurde die Pension zu einer Gruppenunterkunft, und 1996 wurden die landwirtschaftlichen Tätigkeiten eingestellt, so dass die Felder der Natur zurückgegeben wurden.",
+        "Im Jahr 2011 übernahm die dritte Generation das Geschäft: Chantal und Danny Prangsma setzten die Familientradition fort. Der Bauernhof wurde 2012 in eine moderne Gruppenunterkunft umgebaut, das Backhaus wurde zum Sanitärgebäude, und die alte 'Pensionsküche' wurde zur Gastronomieküche umgebaut.",
+        "Am 8. August 2016 ging der alte, charakteristische Schafstall bei einem Großbrand verloren. Glücklicherweise konnte die Feuerwehr weiteren Schaden abwenden. Im Mai 2019 wurde der neue Schafstall an derselben Stelle eröffnet, jedoch mit allem Komfort der heutigen Zeit. Ein wunderschönes Gebäude mit vielen Fenstern, die Ausblick auf die umliegende Natur bieten. Die Teestube befindet sich im Erdgeschoss, und im Obergeschoss wurde ein separater Raum für Tagungen, Trainings oder private Mittagessen realisiert. Der Schafstall ist das ganze Jahr über geöffnet, ein wunderbarer Ort zum Verweilen zu allen Jahreszeiten. Die Gastronomieküche wurde in den neuen Schafstall verlegt, was der alten Küche einen neuen Zweck gab: Wohnung 'De Oude Keuken'. Zusammen mit der Gruppenunterkunft und dem Zigeunerwagen können unsere Gäste diesen einzigartigen Ort auf der Veluwe tagsüber und nachts genießen!"
+      ]
     },
-    sectionTitleDining: "Kulinarische Genüsse",
-    sectionTitleSights: "Kultur & Sehenswürdigkeiten",
-    sectionTitleAction: "Aktiv & Natur",
-    spotsTitle: "Hotspots",
-    spots: [
-      { 
-        title: "Nationalpark De Hoge Veluwe", 
-        desc: "5.400 Hektar Natur mit Wäldern, Heide und Sandverwehungen. Perfekt zum Wandern, Radfahren und Wildbeobachten in der Nähe von Otterlo.", 
-        img: "/images/hoge_veluwe_park.png",
-        link: "https://www.hogeveluwe.nl/de"
-      },
-      { 
-        title: "Cèpes", 
-        desc: "Kulinarischer Genuss mit lokalen und saisonalen Produkten im Restaurant Cèpes beim Hotel de Sterrenberg.", 
-        img: "/images/cepes.jpg",
-        link: "https://cepes.nl/",
-        category: "Essen & Trinken"
-      },
-      { 
-        title: "Museonder", 
-        desc: "Das erste unterirdische Museum der Welt, mitten im Nationalpark De Hoge Veluwe. Entdecken Sie, was unter der Erde auf der Veluwe lebt und lebte.", 
-        img: "/images/museonder.webp",
-        link: "https://hogeveluwe.nl/plan-je-bezoek/beleef-het-park/museonder",
-        category: "Kultur"
-      },
-      { 
-        title: "Kröller-Müller Museum", 
-        desc: "Museum inmitten von De Hoge Veluwe mit einer der größten Van-Gogh-Sammlungen der Welt und einem beeindruckenden Skulpturengarten.", 
-        img: "/images/kroller_muller.jpeg",
-        link: "https://krollermuller.nl/de",
-        category: "Kultur"
-      },
-      { 
-        title: "Planken Wambuis", 
-        desc: "Weitläufiges Naturschutzgebiet mit Heideflächen, Wäldern und großer Wahrscheinlichkeit, Rothirsche oder Wildschweine zu sehen.", 
-        img: "/images/planken_wambuis.jpg",
-        link: "https://www.natuurmonumenten.nl/natuurgebieden/planken-wambuis",
-        category: "Highlights"
-      },
-      {
-        title: "De Waldhoorn",
-        desc: "Gemütliches Restaurant im Zentrum von Otterlo für Mittagessen, Abendessen oder einen Drink nach einem Tag in der Veluwe.",
-        img: "/images/de_waldhoorn.jpg",
-        link: "https://www.de-waldhoorn.nl/de/",
-        category: "Essen & Trinken"
-      }
-    ],
+    sections: {
+      dining: "Essen & Trinken",
+      icecream: "Eis-Tipps!",
+      sights: "Aktivitäten & Sehenswürdigkeiten",
+      walking: "Wandertipps rund um Otterlo",
+      surroundings: "Umgebung (Etwas weiter weg)"
+    },
     dining: [
-      { name: "Grand Café Kröller", desc: "Leckeres Mittag- oder Abendessen im Herzen von Otterlo.", img: "/images/restaurant_farmhouse.png" },
-      { name: "Carnegie Cottage", desc: "Stimmungsvolles Restaurant mit Terrasse.", img: "/images/restaurant_fine.png" }
+      { title: "Essen bei Koe", desc: "Willkommen bei KOE, einem einzigartigen gastronomischen Erlebnis in Otterlo. Es befindet sich in einem stilvoll renovierten Kuhstall auf dem Bauernhof Boer & Bleek und ist ein gemütlicher Ort, umgeben von Wiesen und Wäldern.", img: "/images/omgeving/eten bij koe.jpg" },
+      { title: "Brasserie Otterlo", desc: "Das Hotel liegt im Herzen von Otterlo, dem idealen Hotspot für eine frische Tasse Kaffee, ein Mittag- oder Abendessen. Unsere Köche verleihen burgundischen französischen Gerichten eine moderne Note.", img: "/images/omgeving/brasserie otterlo.jpeg" },
+      { title: "Eetcafé de Driester", desc: "Seit 1997 eine feste Größe im Dorf, neben der Kirche gelegen. Typisch holländische Speisekarte für Mittag- und Abendessen, bei der Qualität und Gemütlichkeit an erster Stelle stehen.", img: "/images/omgeving/de-3-ster.jpg" },
+      { title: "Restaurant de Waldhoorn", desc: "Historischer Treffpunkt mit mehreren Terrassen und einem Innenhof. Lässiger Genuss auf der Terrasse, Sommer wie Winter.", img: "/images/de_waldhoorn.jpg" },
+      { title: "Restaurant Cèpes", desc: "Ein einzigartiges kulinarisches Erlebnis, das in unserer Leidenschaft für lokale, saisonale Zutaten aus der Veluwe verwurzelt ist.", img: "/images/cepes.jpg" },
+      { title: "De Wever Lodge", desc: "Mit einem guten Glas Wein an der Bistro-Bar fühlen Sie sich schnell wie zu Hause. Hausgemachte Gerichte mit saisonalen Zutaten.", img: "/images/omgeving/de wever lodge.jpg" },
+      { title: "Brasserie Roekel", desc: "Inmitten des Naturschutzgebietes Mossel gelegen. Der perfekte Boxenstopp bei Ihrer Wanderung oder Radtour mit Blick in die Natur.", img: "/images/omgeving/brasserie roekel.jpg" },
+      { title: "‘T Smulhuis", desc: "Gastfreundschaft und Genuss stehen hier im Mittelpunkt. Unser Restaurant bietet asiatische und westliche Küche.", img: "/images/omgeving/smulhuis.jpg" }
+    ],
+    icecream: [
+      { title: "Eis von Co Hoenderloo", desc: "Die Tradition unseres hausgemachten Vanilleeises besteht seit über 75 Jahren. Täglich frisch angerichtet an unserer Eistheke.", img: "/images/omgeving/ijs-van-co.png" },
+      { title: "Eisdiele PURO Ede", desc: "Purer Genuss mit authentisch zubereitetem Eis aus unseren Cattabriga Effe6-Gefriertruhen, hergestellt aus den frischesten Zutaten.", img: "/images/omgeving/puro-ede.png" },
+      { title: "Eisdiele Bernado’s Ede", desc: "Seit Jahren in Ede bekannt, mit über 80 Geschmacksrichtungen an täglich hausgemachtem frischem Eis. Auch Spezialeis für Diabetiker und Allergiker.", img: "/images/omgeving/bernados-ede.png" }
     ],
     sights: [
-      { name: "Niederländisches Fliesenmuseum", desc: "Einzigartige Sammlung historischer niederländischer Wandfliesen.", img: "/images/tile_museum.png" },
-      { name: "Radio Kootwijk", desc: "Imposante Sendestation im Art-Deco-Stil mitten in der Heide.", img: "/images/radio_kootwijk.png" },
-      { name: "Aussichtsturm De Valouwe", desc: "Spektakuläre Aussicht über die Baumwipfel der Veluwe.", img: "/images/observation_tower.png" }
+      { title: "Nationalpark De Hoge Veluwe", desc: "Eines der schönsten Naturschutzgebiete der Niederlande, perfekt zum Wandern, Radfahren oder um es mit dem Auto zu erkunden.", img: "/images/hoge_veluwe_park.png", link: "https://www.hogeveluwe.nl/de" },
+      { title: "Jagdhaus St. Hubertus", desc: "Der ehemalige Landsitz des Ehepaars Kröller-Müller und eines der berühmtesten Gebäude der Niederlande, entworfen von Berlage.", img: "/images/omgeving/jachthuis sint hubertus.jpg" },
+      { title: "Museonder", desc: "Das erste unterirdische Museum der Welt im Zentrum des Parks. Entdecken Sie, was in der Veluwe unter der Erde lebt und lebte.", img: "/images/museonder.webp", link: "https://hogeveluwe.nl/plan-je-bezoek/beleef-het-park/museonder" },
+      { title: "Kröller-Müller Museum", desc: "Die schönste Van-Gogh-Sammlung der Welt, einschließlich Meisterwerken moderner Meister und einem weitläufigen beeindruckenden Skulpturengarten.", img: "/images/kroller_muller.jpeg", link: "https://krollermuller.nl/de" },
+      { title: "Niederländisches Fliesenmuseum", desc: "Die größte und vielseitigste Sammlung historischer niederländischer Wandfliesen ab dem späten Mittelalter, historisch wichtig für niederländisches Design.", img: "/images/omgeving/nederlands-tegelmuseum-rasbak-wikipedia-cc30.jpg" }
     ],
-    activities: [
-      { name: "Het Mosselsche Zand", desc: "Wunderschöne Sandverwehung für endlose Spaziergänge.", img: "/images/sand_drift.png" },
-      { name: "Sandverwehung De Zanding", desc: "Naturgebiet direkt am Rand von Otterlo.", img: "/images/sand_drift.png" },
-      { name: "Erlebnispfad 't Eekhoorntje", desc: "Tolle Wanderroute für Kinder durch den Wald.", img: "/images/adventure_path.png" }
-    ]
+    walking: [
+      { title: "Hohe Sanddünen und Heideland", desc: "Beeindruckende Wanderdüne mit Wald auf der einen Seite und Heide und Moosen auf der anderen Seite. Schönes Wandergebiet direkt vor Otterlo.", img: "/images/omgeving/Hoge zandbergen en heide.jpg" },
+      { title: "Big 5 Wanderroute & Eeskooterpad", desc: "Wanderrouten, die die Sanddüne überqueren, mit verstreuten Holzstatuen von wilden Tieren der Veluwe entlang der Big-5-Route.", img: "/images/omgeving/houten-hert-oterlo-big-5-visit-otterlo-5-high.webp" },
+      { title: "Wandertipp Gemeinde Ede", desc: "Sehen Sie sich die spezifische Route für Otterlo, Mossel und Roekel über den Wanderblog der Gemeinde Ede an.", img: "/images/planken_wambuis.jpg", link: "https://www.wandeleninede.nl/blog/otterlo-mossel-roekel" }
+    ],
+    surroundings: [
+      { title: "Paleis het Loo Apeldoorn", desc: "Originaler Palast aus dem 17. Jahrhundert des Hauses Oranien. Bewundern Sie die eingerichteten Räume, beeindruckende Gärten und den königlichen Stall.", img: "/images/omgeving/paleis het loo.webp", link: "https://paleishetloo.nl/de" },
+      { title: "Das Niederländische Freilichtmuseum Arnheim", desc: "Hier können Sie Geschichte von allen Seiten betrachten. Atemberaubende Gebäude, Objekte und bis zu vierhundert Jahre alte Geschichten aus den ganzen Niederlanden.", img: "/images/omgeving/nederlands openlucht museum.jpg", link: "https://www.openluchtmuseum.nl/de" }
+    ],
+    readMore: "Mehr lesen",
+    discover: "Entdecken"
   }
 };
 
 const t = content[lang] || content.nl;
-
-// Categorized items with standardized labels
-const allItems = [
-    ...t.spots.map(s => ({ ...s, category: s.category || t.labels.highlights })), 
-    ...t.dining.map(s => ({ ...s, category: s.category || t.labels.dining })),
-    ...t.sights.map(s => ({ ...s, category: s.category || t.labels.cultuur })),
-    ...t.activities.map(s => ({ ...s, category: s.category || t.labels.natuur }))
-].slice(0, 6);
 ---
 
 <Layout title={`Boerderij Voorste Eng - ${t.title}`} lang={lang}>
   
-  <div class="relative bg-stone-50 pt-32 pb-12 md:py-32 text-center text-slate-800 px-4">
+  <div class="relative bg-stone-50 pt-32 pb-16 md:py-32 text-center text-slate-800 px-4">
       <ScrollReveal animation="fade-up">
          <h1 class="font-heading text-5xl md:text-7xl font-light mb-8 text-bordeaux tracking-tight">{t.headline}</h1>
          <p class="max-w-2xl mx-auto text-stone-600 text-xl font-light leading-relaxed">{t.description}</p>
-         <div class="w-24 h-[1px] bg-bordeaux/30 mx-auto mt-12"></div>
+         <div class="w-16 h-[1px] bg-bordeaux/30 mx-auto mt-12"></div>
       </ScrollReveal>
   </div>
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-32">
-    
-    {/* Masonry Columns Layout */}
-    <div class="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
-      
-      {allItems.map((item, index) => (
-        <div class="break-inside-avoid relative group mb-8">
-            <ScrollReveal animation="fade-up" delay={index % 3 * 0.1}>
-                <a href={item.link || "#"} target={item.link ? "_blank" : undefined} rel={item.link ? "noopener noreferrer" : undefined} class="block bg-white rounded-sm shadow-sm hover:shadow-2xl transition-all duration-500 overflow-hidden transform group-hover:-translate-y-1">
-                    
-                    {/* Image handling - some could be taller */}
-                    <div class={`relative overflow-hidden w-full ${index % 5 === 0 ? 'aspect-[3/4]' : 'aspect-[4/3]'}`}>
-                        <ParallaxImage 
-                            src={item.img || '/hero.png'} 
-                            alt={item.name || item.title} 
-                            class="w-full h-full object-cover"
-                            height={index % 5 === 0 ? 'h-[120%]' : 'h-[120%]'}
-                        />
-                        
-                        {/* Overlay Gradient */}
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-
-                        {/* Top Category Tag */}
-                        <div class="absolute top-4 left-4 z-10">
-                            <span class="inline-block bg-white/90 backdrop-blur text-bordeaux text-xs font-bold uppercase tracking-widest px-3 py-1 shadow-sm border border-stone-100">
-                                {item.type || item.category}
-                            </span>
-                        </div>
+  <div class="bg-white overflow-hidden">
+    {/* De Mossel History Section */}
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 border-b border-stone-100">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <ScrollReveal animation="fade-right">
+                <div class="relative aspect-[4/5] rounded-tl-3xl rounded-br-3xl overflow-hidden shadow-2xl">
+                    <ParallaxImage src={t.history.image} alt={t.history.title} class="w-full h-full object-cover" height="h-[120%]" />
+                    <div class="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-tl-3xl rounded-br-3xl"></div>
+                </div>
+            </ScrollReveal>
+            
+            <ScrollReveal animation="fade-left" delay={0.2}>
+                <div>
+                    <span class="text-bordeaux font-bold tracking-widest uppercase text-sm mb-4 block">Historie</span>
+                    <h2 class="font-heading text-4xl md:text-5xl text-slate-900 mb-8 leading-tight">{t.history.title}</h2>
+                    <div class="space-y-6 text-stone-600 leading-relaxed font-light text-lg">
+                        {t.history.paragraphs.map(p => (
+                            <p>{p}</p>
+                        ))}
                     </div>
-
-                    <div class="p-8">
-                        <h3 class="font-heading text-2xl font-light text-slate-900 mb-3 group-hover:text-bordeaux transition-colors">
-                            {item.name || item.title}
-                        </h3>
-                        <p class="text-stone-500 text-sm leading-relaxed mb-4">
-                            {item.desc}
-                        </p>
-                        <div class="flex items-center text-xs font-bold uppercase tracking-widest text-bordeaux opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                            {lang === 'nl' ? 'Ontdekken' : 'Discover'}
-                            <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                            </svg>
-                        </div>
-                    </div>
-                </a>
+                </div>
             </ScrollReveal>
         </div>
-      ))}
-
     </div>
+
+    {/* Eten & Drinken */}
+    <div class="bg-stone-50 py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal animation="fade-up">
+                <div class="text-center mb-16">
+                    <h2 class="font-heading text-4xl md:text-5xl text-slate-900 mb-4">{t.sections.dining}</h2>
+                    <div class="w-16 h-[1px] bg-bordeaux/30 mx-auto"></div>
+                </div>
+            </ScrollReveal>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {t.dining.map((item, i) => {
+                    const CardTag = item.link ? 'a' : 'div';
+                    const cardProps = item.link ? { href: item.link, target: "_blank", rel: "noopener noreferrer" } : {};
+                    return (
+                    <ScrollReveal animation="fade-up" delay={(i % 4) * 0.1}>
+                        <CardTag {...cardProps} class={`group block h-full bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden transform hover:-translate-y-1 border border-stone-100 ${item.link ? 'cursor-pointer' : ''}`}>
+                            <div class="aspect-[4/3] relative overflow-hidden">
+                                <img src={item.img} alt={item.title} class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+                                <div class="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors"></div>
+                            </div>
+                            <div class="p-6 flex flex-col h-full">
+                                <h3 class="font-heading text-xl text-slate-900 mb-3 group-hover:text-bordeaux transition-colors">{item.title}</h3>
+                                <p class="text-stone-500 font-light text-sm leading-relaxed mb-4 flex-grow">{item.desc}</p>
+                            </div>
+                        </CardTag>
+                    </ScrollReveal>
+                    );
+                })}
+            </div>
+        </div>
+    </div>
+
+    {/* IJstips */}
+    <div class="py-24 bg-gradient-to-br from-amber-50 via-orange-50 to-rose-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal animation="fade-up">
+                <div class="text-center mb-16">
+                    <span class="text-bordeaux font-bold tracking-widest uppercase text-sm mb-4 block">🍦</span>
+                    <h2 class="font-heading text-4xl md:text-5xl text-slate-900 mb-4">{t.sections.icecream}</h2>
+                    <div class="w-16 h-[1px] bg-bordeaux/30 mx-auto"></div>
+                </div>
+            </ScrollReveal>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {t.icecream.map((item, i) => (
+                    <ScrollReveal animation="fade-up" delay={i * 0.1}>
+                        <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 p-8 h-full flex flex-col items-center text-center group border border-stone-100">
+                            <div class="w-24 h-24 rounded-full overflow-hidden mb-6 ring-4 ring-amber-100 group-hover:ring-bordeaux/30 transition-all shadow-lg group-hover:scale-105">
+                                <img src={item.img} alt={item.title} class="w-full h-full object-cover" loading="lazy" />
+                            </div>
+                            <h3 class="font-heading text-xl text-slate-900 mb-3 group-hover:text-bordeaux transition-colors">{item.title}</h3>
+                            <p class="text-stone-600 font-light leading-relaxed text-sm">{item.desc}</p>
+                        </div>
+                    </ScrollReveal>
+                ))}
+            </div>
+        </div>
+    </div>
+
+    {/* Activiteiten & Bezienswaardigheden */}
+    <div class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal animation="fade-up">
+                <div class="flex items-center justify-between mb-12">
+                    <h2 class="font-heading text-4xl text-slate-900">{t.sections.sights}</h2>
+                    <div class="h-[1px] flex-1 bg-stone-200 ml-8 max-w-sm hidden md:block"></div>
+                </div>
+            </ScrollReveal>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+                {t.sights.map((item, i) => {
+                    const CardTag = item.link ? 'a' : 'div';
+                    const cardProps = item.link ? { href: item.link, target: "_blank", rel: "noopener noreferrer" } : {};
+                    return (
+                    <ScrollReveal animation="fade-up" delay={i * 0.1}>
+                        <CardTag {...cardProps} class={`group block h-full flex flex-col ${item.link ? 'cursor-pointer' : ''}`}>
+                            <div class="aspect-[16/10] rounded-xl overflow-hidden mb-6 relative">
+                                <img src={item.img} alt={item.title} class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            </div>
+                            <h3 class="font-heading text-2xl text-slate-900 mb-3 group-hover:text-bordeaux transition-colors">{item.title}</h3>
+                            <p class="text-stone-500 font-light leading-relaxed flex-grow">{item.desc}</p>
+                        </CardTag>
+                    </ScrollReveal>
+                    );
+                })}
+            </div>
+        </div>
+    </div>
+
+    {/* Wandelen */}
+    <div class="bg-stone-50 py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal animation="fade-up">
+                <h2 class="font-heading text-4xl md:text-5xl text-slate-900 mb-12 text-center">{t.sections.walking}</h2>
+            </ScrollReveal>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {t.walking.map((item, i) => (
+                    <ScrollReveal animation="fade-up" delay={i * 0.1}>
+                        <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden h-full flex flex-col group hover:shadow-xl transition-shadow duration-300">
+                            <div class="aspect-video relative overflow-hidden">
+                                <img src={item.img} alt={item.title} class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+                            </div>
+                            <div class="p-8 flex-1 flex flex-col">
+                                <h3 class="font-heading text-xl text-slate-900 mb-3 group-hover:text-bordeaux transition-colors">{item.title}</h3>
+                                <p class="text-stone-500 font-light text-sm leading-relaxed flex-1">{item.desc}</p>
+                                {item.link && (
+                                    <a href={item.link} target="_blank" class="mt-6 inline-flex items-center text-sm font-bold uppercase tracking-widest text-bordeaux hover:text-slate-900 transition-colors">
+                                        {t.readMore}
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                                        </svg>
+                                    </a>
+                                )}
+                            </div>
+                        </div>
+                    </ScrollReveal>
+                ))}
+            </div>
+        </div>
+    </div>
+
+    {/* Surroundings */}
+    <div class="py-24 border-t border-stone-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <ScrollReveal animation="fade-up">
+                <div class="text-center mb-16">
+                    <h2 class="font-heading text-3xl md:text-4xl text-slate-900 mb-4">{t.sections.surroundings}</h2>
+                    <div class="w-16 h-[1px] bg-bordeaux/30 mx-auto"></div>
+                </div>
+            </ScrollReveal>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                {t.surroundings.map((item, i) => {
+                    const CardTag = item.link ? 'a' : 'div';
+                    const cardProps = item.link ? { href: item.link, target: "_blank", rel: "noopener noreferrer" } : {};
+                    return (
+                    <ScrollReveal animation="fade-up" delay={i * 0.1}>
+                        <CardTag {...cardProps} class={`flex flex-col sm:flex-row group bg-white border border-stone-100 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300 h-full ${item.link ? 'cursor-pointer' : ''}`}>
+                            <div class="w-full sm:w-2/5 aspect-[4/3] sm:aspect-auto relative overflow-hidden">
+                                <img src={item.img} alt={item.title} class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700" loading="lazy" />
+                            </div>
+                            <div class="p-8 w-full sm:w-3/5 flex flex-col justify-center">
+                                <h3 class="font-heading text-xl text-slate-900 mb-3 group-hover:text-bordeaux transition-colors">{item.title}</h3>
+                                <p class="text-stone-500 font-light text-sm leading-relaxed">{item.desc}</p>
+                            </div>
+                        </CardTag>
+                    </ScrollReveal>
+                    );
+                })}
+            </div>
+        </div>
+    </div>
+
   </div>
 </Layout>
