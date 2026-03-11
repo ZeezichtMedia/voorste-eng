@@ -58,7 +58,7 @@ const currentNav = navItems[lang] || navItems.nl;
       </div>
       
       <!-- Desktop Menu -->
-      <div class="hidden md:ml-6 md:flex md:space-x-8 items-center">
+      <div class="hidden lg:ml-6 lg:flex lg:space-x-8 items-center">
         {currentNav.map((item) => (
           <div class="relative group">
             <a
@@ -91,7 +91,7 @@ const currentNav = navItems[lang] || navItems.nl;
       </div>
       
       <!-- Desktop Language Selector -->
-      <div class="hidden md:flex items-center space-x-4">
+      <div class="hidden lg:flex items-center space-x-4">
         <a href="/nl" class={`text-sm font-semibold transition-colors ${lang === 'nl' ? 'text-bordeaux' : 'text-slate-400 hover:text-bordeaux'}`}>NL</a>
         <span class="text-dune-sand">|</span>
         <a href="/en" class={`text-sm font-semibold transition-colors ${lang === 'en' ? 'text-bordeaux' : 'text-slate-400 hover:text-bordeaux'}`}>EN</a>
@@ -100,7 +100,7 @@ const currentNav = navItems[lang] || navItems.nl;
       </div>
 
       <!-- Mobile Menu Button -->
-      <div class="flex items-center md:hidden z-50">
+      <div class="flex items-center lg:hidden z-50">
         <button 
           id="mobile-menu-btn"
           type="button" 
@@ -120,7 +120,7 @@ const currentNav = navItems[lang] || navItems.nl;
 <!-- Mobile Menu Overlay -->
 <div 
   id="mobile-menu"
-  class="fixed inset-0 bg-stone-50 z-[60] transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col"
+  class="fixed inset-0 bg-stone-50 z-[60] transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col"
 >
   <!-- Header with Logo and Close Button -->
   <div class="flex justify-between items-center p-6 border-b border-dune-sand/10">
