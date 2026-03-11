@@ -14,110 +14,74 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params;
 
-const galleryCategories = {
-  nl: [
-    {
-      title: "Wonen & Ontspannen",
-      images: [
-        { src: "/images/real/rooms/oude-schuur/categorized/woonkamer.webp", alt: "Sfeervolle woonkamer De Oude Schuur" },
-        { src: "/images/real/rooms/oude-schuur/categorized/woonkamer-zitgedeelte.webp", alt: "Comfortabele zithoek" },
-        { src: "/images/real/rooms/oude-schuur/categorized/woonkamer-closeup.webp", alt: "Authentieke details" },
-        { src: "/images/real/rooms/oude-schuur/kapstok-detail.jpg", alt: "Sfeervolle entree" }
-      ]
-    },
-    {
-      title: "Koken & Genieten",
-      images: [
-        { src: "/images/real/rooms/oude-schuur/categorized/keuken.webp", alt: "Luxe keuken met alle voorzieningen" },
-        { src: "/images/real/rooms/oude-schuur/categorized/koffiemachine.webp", alt: "Nespresso koffiemachine" }
-      ]
-    },
-    {
-      title: "Rust & Slaap",
-      images: [
-        { src: "/images/real/rooms/oude-schuur/categorized/slaapkamer.webp", alt: "Comfortabele slaapkamer" }
-      ]
-    },
-    {
-      title: "Fris & Verzorgd",
-      images: [
-        { src: "/images/real/rooms/oude-schuur/categorized/badkamer.webp", alt: "Moderne badkamer" },
-        { src: "/images/real/rooms/oude-schuur/categorized/douche.webp", alt: "Ruime inloopdouche" },
-        { src: "/images/real/rooms/oude-schuur/categorized/toilet.webp", alt: "Separaat toilet" }
-      ]
-    }
+const categoryImages = [
+  [
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/woonkamer/c5500c7f-4137-4be9-8fdd-e40874bc6f37.avif", alt: "Wonen & Ontspannen foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/woonkamer/6936e7f9-b5c9-4870-8026-f9acb7ed79de.avif", alt: "Wonen & Ontspannen foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/woonkamer/4d2a449b-6b5b-43bd-971b-5874ca2bd4af.avif", alt: "Wonen & Ontspannen foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/woonkamer/ef056eb3-f11e-4f5a-bca8-7e3b223ff89b.avif", alt: "Wonen & Ontspannen foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/woonkamer/ca20ec42-69db-44e6-b7a9-f4062f3d2edb.avif", alt: "Wonen & Ontspannen foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/woonkamer/5dbefeb4-8c8b-431a-a708-5614df79ce98.avif", alt: "Wonen & Ontspannen foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/woonkamer/977b0e3e-248d-4bd0-ae4f-b2bcf46076a9.avif", alt: "Wonen & Ontspannen foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/woonkamer/160c3b4e-e46f-4d9c-98eb-2de06ea3c3c3.avif", alt: "Wonen & Ontspannen foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/woonkamer/69cff89e-bcbe-4364-8dde-6de3c4606b52.jpeg", alt: "Wonen & Ontspannen foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/woonkamer/9966e38f-ddb4-4d76-9dc4-be7e0b097ea7.avif", alt: "Wonen & Ontspannen foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/woonkamer/db7e8c15-8b51-4b37-9508-ec622604a786.avif", alt: "Wonen & Ontspannen foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/woonkamer/ac01adec-beef-47e4-bba3-aab9c577f5d0.jpeg", alt: "Wonen & Ontspannen foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/woonkamer/66336f4c-b4fc-46a1-9baf-692438c597a0.avif", alt: "Wonen & Ontspannen foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/woonkamer/74acc561-09c4-4e94-8ddf-1ce02895b867.avif", alt: "Wonen & Ontspannen foto" },
   ],
-  en: [
-    {
-      title: "Living & Relaxing",
-      images: [
-        { src: "/images/real/rooms/oude-schuur/categorized/woonkamer.webp", alt: "Atmospheric living room The Old Barn" },
-        { src: "/images/real/rooms/oude-schuur/categorized/woonkamer-zitgedeelte.webp", alt: "Comfortable seating area" },
-        { src: "/images/real/rooms/oude-schuur/categorized/woonkamer-closeup.webp", alt: "Authentic details" },
-        { src: "/images/real/rooms/oude-schuur/kapstok-detail.jpg", alt: "Atmospheric entrance" }
-      ]
-    },
-    {
-      title: "Cooking & Enjoying",
-      images: [
-        { src: "/images/real/rooms/oude-schuur/categorized/keuken.webp", alt: "Luxury kitchen with all amenities" },
-        { src: "/images/real/rooms/oude-schuur/categorized/koffiemachine.webp", alt: "Nespresso coffee machine" }
-      ]
-    },
-    {
-      title: "Rest & Sleep",
-      images: [
-        { src: "/images/real/rooms/oude-schuur/categorized/slaapkamer.webp", alt: "Comfortable bedroom" }
-      ]
-    },
-    {
-      title: "Fresh & Cared for",
-      images: [
-        { src: "/images/real/rooms/oude-schuur/categorized/badkamer.webp", alt: "Modern bathroom" },
-        { src: "/images/real/rooms/oude-schuur/categorized/douche.webp", alt: "Spacious walk-in shower" },
-        { src: "/images/real/rooms/oude-schuur/categorized/toilet.webp", alt: "Separate toilet" }
-      ]
-    }
+  [
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/keuken/3c3cc573-7efb-4765-94fc-451b42649e1f.avif", alt: "Koken & Genieten foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/keuken/77dfa84f-b6a2-4cb8-bf20-149d51fe562c.avif", alt: "Koken & Genieten foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/keuken/482e01af-5913-4350-bbea-29ce443162f6.avif", alt: "Koken & Genieten foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/keuken/da21668e-edd3-468c-b65c-6c099dc5e5f0.avif", alt: "Koken & Genieten foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/keuken/ac434d95-4652-48f2-97ad-6fb0d0abfd9e.avif", alt: "Koken & Genieten foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/keuken/e0e1be4d-deb7-4aeb-a614-c9663cc2bfc0.avif", alt: "Koken & Genieten foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/keuken/663191ae-c64e-4878-b9d9-46767f6bb068.avif", alt: "Koken & Genieten foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/keuken/30e5127f-cddc-4a70-accd-ff34aa36bada.avif", alt: "Koken & Genieten foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/keuken/c5cee87f-f453-41cf-b445-a33e237ffd2c.avif", alt: "Koken & Genieten foto" },
   ],
-  de: [
-    {
-      title: "Wohnen & Entspannen",
-      images: [
-        { src: "/images/real/rooms/oude-schuur/categorized/woonkamer.webp", alt: "Stimmungsvolles Wohnzimmer Die Alte Scheune" },
-        { src: "/images/real/rooms/oude-schuur/categorized/woonkamer-zitgedeelte.webp", alt: "Komfortable Sitzecke" },
-        { src: "/images/real/rooms/oude-schuur/categorized/woonkamer-closeup.webp", alt: "Authentische Details" },
-        { src: "/images/real/rooms/oude-schuur/kapstok-detail.jpg", alt: "Stimmungsvoller Eingang" }
-      ]
-    },
-    {
-      title: "Kochen & Genießen",
-      images: [
-        { src: "/images/real/rooms/oude-schuur/categorized/keuken.webp", alt: "Luxusküche mit allen Annehmlichkeiten" },
-        { src: "/images/real/rooms/oude-schuur/categorized/koffiemachine.webp", alt: "Nespresso-Kaffeemaschine" }
-      ]
-    },
-    {
-      title: "Ruhe & Schlaf",
-      images: [
-        { src: "/images/real/rooms/oude-schuur/categorized/slaapkamer.webp", alt: "Komfortables Schlafzimmer" }
-      ]
-    },
-    {
-      title: "Frisch & Gepflegt",
-      images: [
-        { src: "/images/real/rooms/oude-schuur/categorized/badkamer.webp", alt: "Modernes Badezimmer" },
-        { src: "/images/real/rooms/oude-schuur/categorized/douche.webp", alt: "Geräumige begehbare Dusche" },
-        { src: "/images/real/rooms/oude-schuur/categorized/toilet.webp", alt: "Separates WC" }
-      ]
-    }
-  ]
+  [
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/slaapkamer/b41215db-18b5-4d31-a53a-f47008e71ab3.avif", alt: "Rust & Slaap foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/slaapkamer/5ffb82be-4667-4765-ab4e-be2e6fb6d615.avif", alt: "Rust & Slaap foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/slaapkamer/ceee541c-4339-4808-a7dd-61ec9442b2d2.avif", alt: "Rust & Slaap foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/slaapkamer/46962d7b-9228-4385-ae80-4f5203cebca9.avif", alt: "Rust & Slaap foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/slaapkamer/a44d282d-c229-4556-98c3-ece3de93fe31.avif", alt: "Rust & Slaap foto" },
+  ],
+  [
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/complete badkamer/5ac555a2-fec0-4e20-9bfb-3a796072f2c1.avif", alt: "Fris & Verzorgd foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/complete badkamer/6ad7fcd0-1fa9-443c-8675-8cf5b2b6aa8f.avif", alt: "Fris & Verzorgd foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/complete badkamer/7b55f7ec-5b65-4443-bcbb-0acfad5aeaaf.avif", alt: "Fris & Verzorgd foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/toiletruimte/bc31cdb7-18f7-40f7-94c9-465c6019e360.avif", alt: "Fris & Verzorgd foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/toiletruimte/8ca9ae62-09be-4ed6-a2a0-0291c91be4be.avif", alt: "Fris & Verzorgd foto" },
+  ],
+  [
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/terras/6e679602-6ad3-46b0-aa55-859f61a53df4.avif", alt: "Buitenleven foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/terras/1a3da65f-767d-49f7-815d-a9a34338f47d.avif", alt: "Buitenleven foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/terras/ad4e574b-fd37-47ea-8b03-400effabba51.avif", alt: "Buitenleven foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/terras/2b8a1b36-62cd-41d4-806f-0d00246d942c.avif", alt: "Buitenleven foto" },
+    { src: "/images/real/rooms/oude-schuur/fotos-2026/terras/e4a865eb-0ad6-4458-a30f-657b8810a183.avif", alt: "Buitenleven foto" },
+  ],
+];
+
+const categoryTitles = {
+  nl: ["Woonkamer", "Keuken", "Slaapkamer", "Badkamer", "Terras & Tuin"],
+  en: ["Living Room", "Kitchen", "Bedroom", "Bathroom", "Terrace & Garden"],
+  de: ["Wohnzimmer", "Küche", "Schlafzimmer", "Badezimmer", "Terrasse & Garten"]
 };
 
+const galleryCategories = {
+  nl: categoryTitles.nl.map((title, i) => ({ title, images: categoryImages[i] })),
+  en: categoryTitles.en.map((title, i) => ({ title, images: categoryImages[i] })),
+  de: categoryTitles.de.map((title, i) => ({ title, images: categoryImages[i] }))
+};
 const content = {
   nl: {
     title: "De Oude Schuur",
     headline: "De Oude Schuur",
     intro: "Ervaar de charme van vroeger met het comfort van nu in 'De Oude Schuur'. Een sfeervol verblijf waar authentieke details en moderne luxe samenkomen. Deze ruimte is van alle gemakken voorzien, inclusief vloerverwarming, een luxe keuken met oven en Nespresso-machine, en heerlijke comfortabele bedden.",
+    specs: ["2 gasten", "1 slaapkamer", "1 tweepersoonsbed", "1 badkamer", "1 toilet"],
     galleryTitle: "Sfeerimpressie",
     rules: {
       title: "Goed om te weten",
@@ -133,6 +97,7 @@ const content = {
     title: "The Old Barn",
     headline: "The Old Barn",
     intro: "Experience the charm of the past with the comfort of today in 'The Old Barn'. An atmospheric stay where authentic details and modern luxury meet. This space is fully equipped, including underfloor heating, a luxury kitchen with oven and Nespresso machine, and wonderful comfortable beds.",
+    specs: ["2 guests", "1 bedroom", "1 double bed", "1 bathroom", "1 toilet"],
     galleryTitle: "Impressions",
     rules: {
       title: "Good to know",
@@ -148,6 +113,7 @@ const content = {
     title: "Die Alte Scheune",
     headline: "Die Alte Scheune",
     intro: "Erleben Sie den Charme der Vergangenheit mit dem Komfort von heute in 'Die Alte Scheune'. Ein stimmungsvoller Aufenthalt, wo authentische Details und moderner Luxus aufeinandertreffen. Dieser Raum ist komplett ausgestattet, inklusive Fußbodenheizung, einer Luxusküche mit Ofen und Nespresso-Maschine sowie herrlich bequemen Betten.",
+    specs: ["2 Gäste", "1 Schlafzimmer", "1 Doppelbett", "1 Badezimmer", "1 WC"],
     galleryTitle: "Impressionen",
     rules: {
       title: "Gut zu wissen",
@@ -176,10 +142,25 @@ const categories = galleryCategories[lang] || galleryCategories.nl;
 
     <!-- Intro Text -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16 mt-24 px-4">
+      <div class="text-center max-w-4xl mx-auto mb-20 mt-24 px-4">
         <ScrollReveal animation="fade-up">
-            <p class="text-stone-600 text-xl font-light leading-relaxed">{t.intro}</p>
-            <div class="w-24 h-[1px] bg-bordeaux/30 mx-auto mt-12"></div>
+            <p class="text-stone-600 text-xl font-light leading-relaxed mb-12">{t.intro}</p>
+            
+            <!-- Modern Specs Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-y-10 gap-x-4 py-10 border-t border-b border-stone-100">
+                {t.specs.map((spec: string) => {
+                    const match = spec.match(/^(\d+)\s+(.+)$/);
+                    const value = match ? match[1] : "✓";
+                    const label = match ? match[2] : spec;
+                    
+                    return (
+                        <div class="flex flex-col items-center justify-center text-center">
+                            <span class="text-4xl font-heading font-light text-bordeaux mb-3">{value}</span>
+                            <span class="text-xs uppercase tracking-[0.2em] text-stone-500 font-medium">{label}</span>
+                        </div>
+                    );
+                })}
+            </div>
         </ScrollReveal>
       </div>
 

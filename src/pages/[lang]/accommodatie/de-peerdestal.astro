@@ -14,135 +14,63 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params;
 
-const galleryCategories = {
-  nl: [
-    {
-      title: "Wonen & Ontspannen",
-      images: [
-        { src: "/images/real/rooms/peerdestal/categorized/woonkamer.webp", alt: "Sfeervolle woonkamer De Peerdestal" },
-        { src: "/images/real/rooms/peerdestal/categorized/woonkamer-closeup.webp", alt: "Authentieke details" },
-        { src: "/images/real/rooms/peerdestal/categorized/woonkamer-2.webp", alt: "Ruimtelijk en licht" },
-      ]
-    },
-    {
-      title: "Koken & Genieten",
-      images: [
-        { src: "/images/real/rooms/peerdestal/categorized/keuken.webp", alt: "Luxe keuken" },
-        { src: "/images/real/rooms/peerdestal/categorized/eettafel.webp", alt: "Gezellige eethoek" }
-      ]
-    },
-    {
-      title: "Rust & Slaap",
-      images: [
-        { src: "/images/real/rooms/peerdestal/categorized/slaapkamer.webp", alt: "Comfortabele slaapkamer met boxspring" }
-      ]
-    },
-    {
-      title: "Fris & Verzorgd",
-      images: [
-        { src: "/images/real/rooms/peerdestal/categorized/badkamer.webp", alt: "Moderne badkamer" },
-        { src: "/images/real/rooms/peerdestal/badkamer-nieuw-1.jpg", alt: "Ruime wastafel" },
-        { src: "/images/real/rooms/peerdestal/badkamer-nieuw-2.jpg", alt: "Luxe afwerking" },
-        { src: "/images/real/rooms/peerdestal/categorized/douche.webp", alt: "Inloopdouche" },
-        { src: "/images/real/rooms/peerdestal/categorized/toilet.webp", alt: "Toilet" }
-      ]
-    },
-    {
-      title: "Buitenleven",
-      images: [
-        { src: "/images/real/rooms/peerdestal/categorized/terras.webp", alt: "Privéterras in het groen" },
-        { src: "/images/real/rooms/peerdestal/terras-ontbijt.jpg", alt: "Ontbijt op het terras" },
-        { src: "/images/real/rooms/peerdestal/ontbijt-terras-detail.jpg", alt: "Genieten in de buitenlucht" }
-      ]
-    }
+const categoryImages = [
+  [
+    { src: "/images/real/rooms/peerdestal/fotos-2026/Woonkamer/209b336b-6006-4b58-a8dc-afdcce36808e.avif", alt: "Wonen & Ontspannen foto" },
+    { src: "/images/real/rooms/peerdestal/fotos-2026/Woonkamer/fdd358b2-3836-4a5d-9373-f40fe885449f.avif", alt: "Wonen & Ontspannen foto" },
+    { src: "/images/real/rooms/peerdestal/fotos-2026/Woonkamer/822e2868-e56e-4923-b62c-5f87860989ee.avif", alt: "Wonen & Ontspannen foto" },
+    { src: "/images/real/rooms/peerdestal/fotos-2026/Woonkamer/9ac8d810-cb7e-4339-a251-fff4e1a966aa.avif", alt: "Wonen & Ontspannen foto" },
+    { src: "/images/real/rooms/peerdestal/fotos-2026/Woonkamer/4a5e16e5-01c3-4afc-871e-4c063d9d6043.avif", alt: "Wonen & Ontspannen foto" },
+    { src: "/images/real/rooms/peerdestal/fotos-2026/Woonkamer/a36a21cf-4e0b-4bf6-800a-03cb4d80f21d.avif", alt: "Wonen & Ontspannen foto" },
+    { src: "/images/real/rooms/peerdestal/fotos-2026/Woonkamer/97b293d6-77bf-4b04-97d1-a7e7f0e41a3d.avif", alt: "Wonen & Ontspannen foto" },
+    { src: "/images/real/rooms/peerdestal/fotos-2026/Woonkamer/1998aad2-e11a-4cc3-8f2e-da652f98e5a2.avif", alt: "Wonen & Ontspannen foto" },
   ],
-  en: [
-    {
-      title: "Living & Relaxing",
-      images: [
-        { src: "/images/real/rooms/peerdestal/categorized/woonkamer.webp", alt: "Atmospheric living room The Horse Stable" },
-        { src: "/images/real/rooms/peerdestal/categorized/woonkamer-closeup.webp", alt: "Authentic details" },
-        { src: "/images/real/rooms/peerdestal/categorized/woonkamer-2.webp", alt: "Spacious and bright" },
-      ]
-    },
-    {
-      title: "Cooking & Enjoying",
-      images: [
-        { src: "/images/real/rooms/peerdestal/categorized/keuken.webp", alt: "Luxury kitchen" },
-        { src: "/images/real/rooms/peerdestal/categorized/eettafel.webp", alt: "Cozy dining area" }
-      ]
-    },
-    {
-      title: "Rest & Sleep",
-      images: [
-        { src: "/images/real/rooms/peerdestal/categorized/slaapkamer.webp", alt: "Comfortable bedroom with boxspring" }
-      ]
-    },
-    {
-      title: "Fresh & Cared for",
-      images: [
-        { src: "/images/real/rooms/peerdestal/categorized/badkamer.webp", alt: "Modern bathroom" },
-        { src: "/images/real/rooms/peerdestal/badkamer-nieuw-1.jpg", alt: "Spacious sink" },
-        { src: "/images/real/rooms/peerdestal/badkamer-nieuw-2.jpg", alt: "Luxury finish" },
-        { src: "/images/real/rooms/peerdestal/categorized/douche.webp", alt: "Walk-in shower" },
-        { src: "/images/real/rooms/peerdestal/categorized/toilet.webp", alt: "Toilet" }
-      ]
-    },
-    {
-      title: "Outdoor Living",
-      images: [
-        { src: "/images/real/rooms/peerdestal/categorized/terras.webp", alt: "Private terrace in the green" },
-        { src: "/images/real/rooms/peerdestal/terras-ontbijt.jpg", alt: "Breakfast on the terrace" },
-        { src: "/images/real/rooms/peerdestal/ontbijt-terras-detail.jpg", alt: "Enjoying the outdoors" }
-      ]
-    }
+  [
+    { src: "/images/real/rooms/peerdestal/fotos-2026/keuken/5a6fc0eb-0c38-475c-a2b2-a9a294d33810.avif", alt: "Koken & Genieten foto" },
+    { src: "/images/real/rooms/peerdestal/fotos-2026/keuken/27d2dd18-485a-4c66-948e-71477da61d29.avif", alt: "Koken & Genieten foto" },
+    { src: "/images/real/rooms/peerdestal/fotos-2026/keuken/eacd4ae2-549d-42bf-b1c4-2b7de51c3669.avif", alt: "Koken & Genieten foto" },
+    { src: "/images/real/rooms/peerdestal/fotos-2026/keuken/668881e0-e4e4-464e-b579-66e229d3f0e3.avif", alt: "Koken & Genieten foto" },
+    { src: "/images/real/rooms/peerdestal/fotos-2026/keuken/c5bdd7f9-074f-449a-bde5-42bb71859ced.avif", alt: "Koken & Genieten foto" },
+    { src: "/images/real/rooms/peerdestal/fotos-2026/keuken/c5cee87f-f453-41cf-b445-a33e237ffd2c.avif", alt: "Koken & Genieten foto" },
   ],
-  de: [
-    {
-      title: "Wohnen & Entspannen",
-      images: [
-        { src: "/images/real/rooms/peerdestal/categorized/woonkamer.webp", alt: "Stimmungsvolles Wohnzimmer Der Pferdestall" },
-        { src: "/images/real/rooms/peerdestal/categorized/woonkamer-closeup.webp", alt: "Authentische Details" },
-        { src: "/images/real/rooms/peerdestal/categorized/woonkamer-2.webp", alt: "Geräumig und hell" },
-      ]
-    },
-    {
-      title: "Kochen & Genießen",
-      images: [
-        { src: "/images/real/rooms/peerdestal/categorized/keuken.webp", alt: "Luxusküche" },
-        { src: "/images/real/rooms/peerdestal/categorized/eettafel.webp", alt: "Gemütliche Essecke" }
-      ]
-    },
-    {
-      title: "Ruhe & Schlaf",
-      images: [
-        { src: "/images/real/rooms/peerdestal/categorized/slaapkamer.webp", alt: "Komfortables Schlafzimmer mit Boxspring" }
-      ]
-    },
-    {
-      title: "Frisch & Gepflegt",
-      images: [
-        { src: "/images/real/rooms/peerdestal/categorized/badkamer.webp", alt: "Modernes Badezimmer" },
-        { src: "/images/real/rooms/peerdestal/categorized/douche.webp", alt: "Begehbare Dusche" },
-        { src: "/images/real/rooms/peerdestal/categorized/toilet.webp", alt: "WC" }
-      ]
-    },
-    {
-      title: "Leben im Freien",
-      images: [
-        { src: "/images/real/rooms/peerdestal/categorized/terras.webp", alt: "Private Terrasse im Grünen" },
-        { src: "/images/real/rooms/peerdestal/terras-ontbijt.jpg", alt: "Frühstück auf der Terrasse" },
-        { src: "/images/real/rooms/peerdestal/ontbijt-terras-detail.jpg", alt: "Genießen im Freien" }
-      ]
-    }
-  ]
+  [
+    { src: "/images/real/rooms/peerdestal/fotos-2026/Slaapkamer/ab244a02-9954-4a22-b2c3-5f111399cf17.avif", alt: "Rust & Slaap foto" },
+    { src: "/images/real/rooms/peerdestal/fotos-2026/Slaapkamer/4a924d73-b2e3-41a9-bf30-3e1c06f72a3f.avif", alt: "Rust & Slaap foto" },
+    { src: "/images/real/rooms/peerdestal/fotos-2026/Slaapkamer/60593157-a68e-4091-bc4b-5bb6f1b90255.avif", alt: "Rust & Slaap foto" },
+    { src: "/images/real/rooms/peerdestal/fotos-2026/Slaapkamer/e4611e7e-1f59-45c1-bd24-a834c71b8aca.avif", alt: "Rust & Slaap foto" },
+    { src: "/images/real/rooms/peerdestal/fotos-2026/Slaapkamer/24c451c8-f53c-40ad-9953-1d6da994c5fc.avif", alt: "Rust & Slaap foto" },
+    { src: "/images/real/rooms/peerdestal/fotos-2026/Slaapkamer/f88455e7-006e-4117-a38d-61fbef96949e.avif", alt: "Rust & Slaap foto" },
+  ],
+  [
+    { src: "/images/real/rooms/peerdestal/fotos-2026/Badkamer/04afb8c0-0a8d-43cd-9d16-915f103c6338.avif", alt: "Fris & Verzorgd foto" },
+    { src: "/images/real/rooms/peerdestal/fotos-2026/Badkamer/1ae99fa8-e032-45e6-9106-577e8a314a07.avif", alt: "Fris & Verzorgd foto" },
+    { src: "/images/real/rooms/peerdestal/fotos-2026/Badkamer/e1add379-44d7-4c17-b91e-a42c7fdbc478.avif", alt: "Fris & Verzorgd foto" },
+    { src: "/images/real/rooms/peerdestal/fotos-2026/toiletruimte/cc139402-6693-4431-94be-2dc848b38a0f.avif", alt: "Fris & Verzorgd foto" },
+    { src: "/images/real/rooms/peerdestal/fotos-2026/toiletruimte/67be2e9a-9655-40ab-b447-e00e33bb4653.avif", alt: "Fris & Verzorgd foto" },
+  ],
+  [
+    { src: "/images/real/rooms/peerdestal/fotos-2026/terras/7fbab5cc-613a-4c8f-9ae4-8944390e72b7.avif", alt: "Buitenleven foto" },
+    { src: "/images/real/rooms/peerdestal/fotos-2026/terras/652d1baa-768d-4e60-b9aa-0c3462328e01.avif", alt: "Buitenleven foto" },
+  ],
+];
+
+const categoryTitles = {
+  nl: ["Woonkamer", "Keuken", "Slaapkamer", "Badkamer", "Terras & Tuin"],
+  en: ["Living Room", "Kitchen", "Bedroom", "Bathroom", "Terrace & Garden"],
+  de: ["Wohnzimmer", "Küche", "Schlafzimmer", "Badezimmer", "Terrasse & Garten"]
 };
 
+const galleryCategories = {
+  nl: categoryTitles.nl.map((title, i) => ({ title, images: categoryImages[i] })),
+  en: categoryTitles.en.map((title, i) => ({ title, images: categoryImages[i] })),
+  de: categoryTitles.de.map((title, i) => ({ title, images: categoryImages[i] }))
+};
 const content = {
   nl: {
     title: "De Peerdestal",
     headline: "De Peerdestal",
     intro: "Overnacht in de sfeervolle 'Peerdestal'. Een unieke plek waar het verleden voelbaar is, maar waar u geniet van hedendaags comfort. De ruimte beschikt over een moderne keuken, vloerverwarming en comfortabele 2-persoons bedden voor een heerlijke nachtrust.",
+    specs: ["2 gasten", "1 slaapkamer", "1 tweepersoonsbed", "1 badkamer"],
     galleryTitle: "Sfeerimpressie",
     rules: {
       title: "Goed om te weten",
@@ -158,6 +86,7 @@ const content = {
     title: "The Horse Stable",
     headline: "The Horse Stable",
     intro: "Stay in the atmospheric 'Peerdestal'. A unique place where the past is palpable, but where you enjoy contemporary comfort. The space features a modern kitchen, underfloor heating, and comfortable double beds for a wonderful night's sleep.",
+    specs: ["2 guests", "1 bedroom", "1 double bed", "1 bathroom"],
     galleryTitle: "Impressions",
     rules: {
       title: "Good to know",
@@ -173,6 +102,7 @@ const content = {
     title: "Der Pferdestall",
     headline: "Der Pferdestall",
     intro: "Übernachten Sie im stimmungsvollen 'Peerdestal'. Ein einzigartiger Ort, an dem die Vergangenheit spürbar ist, Sie aber zeitgemäßen Komfort genießen. Der Raum verfügt über eine moderne Küche, Fußbodenheizung und komfortable Doppelbetten für eine wunderbare Nachtruhe.",
+    specs: ["2 Gäste", "1 Schlafzimmer", "1 Doppelbett", "1 Badezimmer"],
     galleryTitle: "Impressionen",
     rules: {
       title: "Gut zu wissen",
@@ -201,10 +131,25 @@ const categories = galleryCategories[lang] || galleryCategories.nl;
 
     <!-- Intro Text -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16 mt-24 px-4">
+      <div class="text-center max-w-4xl mx-auto mb-20 mt-24 px-4">
         <ScrollReveal animation="fade-up">
-            <p class="text-stone-600 text-xl font-light leading-relaxed">{t.intro}</p>
-            <div class="w-24 h-[1px] bg-bordeaux/30 mx-auto mt-12"></div>
+            <p class="text-stone-600 text-xl font-light leading-relaxed mb-12">{t.intro}</p>
+            
+            <!-- Modern Specs Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-4 py-10 border-t border-b border-stone-100">
+                {t.specs.map((spec: string) => {
+                    const match = spec.match(/^(\d+)\s+(.+)$/);
+                    const value = match ? match[1] : "✓";
+                    const label = match ? match[2] : spec;
+                    
+                    return (
+                        <div class="flex flex-col items-center justify-center text-center">
+                            <span class="text-4xl font-heading font-light text-bordeaux mb-3">{value}</span>
+                            <span class="text-xs uppercase tracking-[0.2em] text-stone-500 font-medium">{label}</span>
+                        </div>
+                    );
+                })}
+            </div>
         </ScrollReveal>
       </div>
 
