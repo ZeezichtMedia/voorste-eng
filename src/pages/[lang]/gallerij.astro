@@ -199,8 +199,9 @@ const images = [
 </script>
 
 <style>
-  /* Force visibility on mobile to prevent ScrollReveal from hiding images if JS/Observer fails */
-  @media (max-width: 768px) {
+  /* Force visibility on mobile and iPads to prevent ScrollReveal from hiding images 
+     (Safari has known bugs with IntersectionObserver inside CSS multi-column layouts) */
+  @media (max-width: 1366px) {
     :global(.mobile-reveal-force) {
       opacity: 1 !important;
       transform: none !important;
