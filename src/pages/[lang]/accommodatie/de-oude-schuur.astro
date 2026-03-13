@@ -80,14 +80,14 @@ const content = {
   nl: {
     title: "De Oude Schuur",
     headline: "De Oude Schuur",
-    intro: "Ervaar de charme van vroeger met het comfort van nu in 'De Oude Schuur'. Een sfeervol verblijf waar authentieke details en moderne luxe samenkomen. Deze ruimte is van alle gemakken voorzien, inclusief vloerverwarming, een luxe keuken met oven en Nespresso-machine, en heerlijke comfortabele bedden.",
-    specs: ["2 gasten", "1 slaapkamer", "1 tweepersoonsbed", "1 badkamer", "1 toilet"],
+    intro: "Ervaar de charme van vroeger met het comfort van nu in 'De Oude Schuur'. Een sfeervol verblijf waar authentieke details en moderne luxe samenkomen. Het appartement is voorzien van een volledig ingerichte keuken met vaatwasmachine en kookplaat. In het centrale halletje bevindt zich een gezamenlijke oven. Ook beschikt de ruimte over vloerverwarming, een Nespresso-machine en heerlijke tweepersoons bedden.",
+    specs: ["2 gasten", "1 slaapkamer", "1 tweepersoons bed", "1 badkamer", "1 toilet", "Vaatwasser", "Kookplaat"],
     galleryTitle: "Sfeerimpressie",
     rules: {
       title: "Goed om te weten",
       items: [
         { label: "Check-in", value: "Vanaf 15:00" },
-        { label: "Check-out", value: "Tot 10:30" },
+        { label: "Check-out", value: "Tot 10:00" },
         { label: "Roken", value: "Niet toegestaan" },
         { label: "Huisdieren", value: "Niet toegestaan" }
       ]
@@ -96,14 +96,14 @@ const content = {
   en: {
     title: "The Old Barn",
     headline: "The Old Barn",
-    intro: "Experience the charm of the past with the comfort of today in 'The Old Barn'. An atmospheric stay where authentic details and modern luxury meet. This space is fully equipped, including underfloor heating, a luxury kitchen with oven and Nespresso machine, and wonderful comfortable beds.",
-    specs: ["2 guests", "1 bedroom", "1 double bed", "1 bathroom", "1 toilet"],
+    intro: "Experience the charm of the past with the comfort of today in 'The Old Barn'. An atmospheric stay where authentic details and modern luxury meet. The apartment features a fully equipped kitchen with dishwasher and stovetop. A shared oven is located in the central hallway. The space also includes underfloor heating, a Nespresso machine, and wonderful double beds.",
+    specs: ["2 guests", "1 bedroom", "1 double bed", "1 bathroom", "1 toilet", "Dishwasher", "Stovetop"],
     galleryTitle: "Impressions",
     rules: {
       title: "Good to know",
       items: [
         { label: "Check-in", value: "From 15:00" },
-        { label: "Check-out", value: "Until 10:30" },
+        { label: "Check-out", value: "Until 10:00" },
         { label: "Smoking", value: "Not allowed" },
         { label: "Pets", value: "Not allowed" }
       ]
@@ -112,14 +112,14 @@ const content = {
   de: {
     title: "Die Alte Scheune",
     headline: "Die Alte Scheune",
-    intro: "Erleben Sie den Charme der Vergangenheit mit dem Komfort von heute in 'Die Alte Scheune'. Ein stimmungsvoller Aufenthalt, wo authentische Details und moderner Luxus aufeinandertreffen. Dieser Raum ist komplett ausgestattet, inklusive Fußbodenheizung, einer Luxusküche mit Ofen und Nespresso-Maschine sowie herrlich bequemen Betten.",
-    specs: ["2 Gäste", "1 Schlafzimmer", "1 Doppelbett", "1 Badezimmer", "1 WC"],
+    intro: "Erleben Sie den Charme der Vergangenheit mit dem Komfort von heute in 'Die Alte Scheune'. Ein stimmungsvoller Aufenthalt, wo authentische Details und moderner Luxus aufeinandertreffen. Das Apartment verfügt over eine komplett ausgestattete Küche met Spülmaschine und Kochfeld. Ein gemeinsamer Ofen befindet sich im zentralen Flur. Außerdem verfügt der Raum over Fußbodenheizung, een Nespresso-Maschine und herrliche Doppelbetten.",
+    specs: ["2 Gäste", "1 Schlafzimmer", "1 Doppelbett", "1 Badezimmer", "1 WC", "Spülmaschine", "Kochfeld"],
     galleryTitle: "Impressionen",
     rules: {
       title: "Gut zu wissen",
       items: [
         { label: "Check-in", value: "Ab 15:00" },
-        { label: "Check-out", value: "Bis 10:30" },
+        { label: "Check-out", value: "Bis 10:00" },
         { label: "Rauchen", value: "Nicht erlaubt" },
         { label: "Haustiere", value: "Nicht erlaubt" }
       ]
@@ -160,18 +160,18 @@ const categories = galleryCategories[lang] || galleryCategories.nl;
                 <!-- Right: Specs Block -->
                 <div class="lg:col-span-4 bg-foam-white p-8 rounded-sm border border-stone-100/50">
                     <h3 class="text-sm font-bold tracking-widest uppercase text-stone-400 mb-8">{lang === 'nl' ? 'Specificaties' : (lang === 'en' ? 'Specifications' : 'Spezifikationen')}</h3>
-                    <div class="space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-4">
                         {t.specs.map((spec: string) => {
                             const match = spec.match(/^(\d+)\s+(.+)$/);
                             const value = match ? match[1] : "✓";
                             const label = match ? match[2] : spec;
                             
                             return (
-                                <div class="flex items-center gap-4 border-b border-stone-200/50 pb-4 last:border-0 last:pb-0">
-                                    <div class="w-10 h-10 flex items-center justify-center rounded-full bg-white text-bordeaux font-heading text-xl shadow-sm">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-full bg-white text-bordeaux font-heading text-lg shadow-sm border border-stone-100">
                                         {value}
                                     </div>
-                                    <span class="text-stone-600 uppercase tracking-wider text-xs font-semibold">{label}</span>
+                                    <span class="text-stone-600 uppercase tracking-wider text-[10px] font-bold leading-tight">{label}</span>
                                 </div>
                             );
                         })}

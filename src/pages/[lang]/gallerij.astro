@@ -28,8 +28,6 @@ const subtitle = {
 const images = [
   // Exterior
   { src: "/images/real/exterior/exterior-1.avif" },
-  { src: "/images/real/exterior/exterior-2.avif" },
-  { src: "/images/real/exterior/exterior-3.avif" },
   { src: "/images/real/exterior/exterior-4.avif" },
   // Interior - Living Room
   { src: "/images/real/living-room/living-room-1.avif" },
@@ -74,7 +72,6 @@ const images = [
     <div class="flex flex-col md:block md:columns-2 lg:columns-3 xl:columns-4 gap-4 space-y-4">
       {images.map((img, index) => (
             <div class="break-inside-avoid relative group cursor-pointer overflow-hidden rounded-sm mb-4 w-full" onclick={`openLightbox(${index})`}>
-              <ScrollReveal animation="fade-up" delay={(index % 4) * 0.1} duration={0.8} class="mobile-reveal-force">
                  <div class="w-full relative">
                     <img 
                       src={img.src} 
@@ -95,7 +92,6 @@ const images = [
                         </div>
                     </div>
                  </div>
-              </ScrollReveal>
             </div>
       ))}
     </div>
@@ -197,14 +193,3 @@ const images = [
     if (e.key === 'Escape') closeLightbox();
   });
 </script>
-
-<style>
-  /* Force visibility on mobile and iPads to prevent ScrollReveal from hiding images 
-     (Safari has known bugs with IntersectionObserver inside CSS multi-column layouts) */
-  @media (max-width: 1366px) {
-    :global(.mobile-reveal-force) {
-      opacity: 1 !important;
-      transform: none !important;
-    }
-  }
-</style>
