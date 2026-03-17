@@ -1,4 +1,5 @@
 import type { APIRoute } from 'astro';
+import nodemailer from 'nodemailer';
 
 export const POST: APIRoute = async ({ request }) => {
   try {
@@ -17,10 +18,13 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
 
-    const RESEND_API_KEY = import.meta.env.RESEND_API_KEY;
+    const SMTP_HOST = import.meta.env.SMTP_HOST;
+    const SMTP_PORT = import.meta.env.SMTP_PORT || "465";
+    const SMTP_USER = import.meta.env.SMTP_USER;
+    const SMTP_PASS = import.meta.env.SMTP_PASS;
 
-    if (!RESEND_API_KEY) {
-      console.error('RESEND_API_KEY is not defined');
+    if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
+      console.error('SMTP credentials are not fully defined in Environment Variables.');
       return new Response(
         JSON.stringify({
           message: 'Email service not configured',
@@ -29,44 +33,42 @@ export const POST: APIRoute = async ({ request }) => {
       );
     }
 
-    const response = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${RESEND_API_KEY}`,
+    // Create a Nodemailer transporter using SMTP
+    const transporter = nodemailer.createTransport({
+      host: SMTP_HOST,
+      port: Number(SMTP_PORT),
+      secure: Number(SMTP_PORT) === 465, // true for 465, false for other ports
+      auth: {
+        user: SMTP_USER,
+        pass: SMTP_PASS,
       },
-      body: JSON.stringify({
-        from: 'Contactformulier <onboarding@resend.dev>', // Resend default for unverified domains
-        to: 'info@boerderijvoorste-eng.nl',
-        subject: `Nieuw contactformulier bericht van ${name}`,
-        reply_to: email,
-        html: `
-          <h3>Nieuw bericht van de website</h3>
-          <p><strong>Naam:</strong> ${name}</p>
-          <p><strong>E-mail:</strong> ${email}</p>
-          <p><strong>Bericht:</strong></p>
-          <p>${message}</p>
-        `,
-      }),
     });
 
-    if (response.ok) {
-      return new Response(
-        JSON.stringify({
-          message: 'Success!',
-        }),
-        { status: 200 }
-      );
-    } else {
-      const data = await response.json();
-      console.error('Resend error:', data);
-      return new Response(
-        JSON.stringify({
-          message: 'Error sending email',
-        }),
-        { status: 500 }
-      );
-    }
+    // Send the email
+    const info = await transporter.sendMail({
+      from: `"Website Contact Form" <${SMTP_USER}>`, // Sender address must often match the authenticated user
+      to: 'info@boerderijvoorste-eng.nl', // Receiver
+      subject: `Nieuw contactformulier bericht van ${name}`,
+      replyTo: email as string,
+      text: `Nieuw bericht van de website\n\nNaam: ${name}\nE-mail: ${email}\nBericht:\n${message}`,
+      html: `
+        <h3>Nieuw bericht van de website</h3>
+        <p><strong>Naam:</strong> ${name}</p>
+        <p><strong>E-mail:</strong> ${email}</p>
+        <p><strong>Bericht:</strong></p>
+        <p>${message}</p>
+      `,
+    });
+
+    console.log('Message sent: %s', info.messageId);
+
+    return new Response(
+      JSON.stringify({
+        message: 'Success!',
+      }),
+      { status: 200 }
+    );
+    
   } catch (error) {
     console.error('Server error:', error);
     return new Response(
