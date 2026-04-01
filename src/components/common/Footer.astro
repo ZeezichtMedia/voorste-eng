@@ -11,7 +11,8 @@ const content = {
     home: "Home",
     accommodation: "Accommodatie",
     surroundings: "Omgeving",
-    gallery: "Gallerij"
+    gallery: "Gallerij",
+    book: "Boeken"
   },
   en: {
     cta: "Check availability",
@@ -20,7 +21,8 @@ const content = {
     home: "Home",
     accommodation: "Accommodation",
     surroundings: "Surroundings",
-    gallery: "Gallery"
+    gallery: "Gallery",
+    book: "Book"
   },
   de: {
     cta: "Verfügbarkeit prüfen",
@@ -29,7 +31,8 @@ const content = {
     home: "Home",
     accommodation: "Unterkunft",
     surroundings: "Umgebung",
-    gallery: "Galerie"
+    gallery: "Galerie",
+    book: "Buchen"
   }
 };
 
@@ -77,6 +80,7 @@ const t = content[lang] || content.nl;
                         <li><a href={`/${lang}/accommodatie`} class="hover:text-white transition-colors">{t.accommodation}</a></li>
                         <li><a href={`/${lang}/omgeving`} class="hover:text-white transition-colors">{t.surroundings}</a></li>
                         <li><a href={`/${lang}/gallerij`} class="hover:text-white transition-colors">{t.gallery}</a></li>
+                        <li><a href={`/${lang}/boeken`} class="hover:text-white transition-colors">{t.book}</a></li>
                     </ul>
                 </div>
 
