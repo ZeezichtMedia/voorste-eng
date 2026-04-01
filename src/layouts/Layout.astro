@@ -11,9 +11,10 @@ import "../styles/global.css";
 interface Props {
 	title: string;
 	description?: string;
+	hideBookingButtons?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, hideBookingButtons = false } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 --- 
 
@@ -55,15 +56,17 @@ const lang = getLangFromUrl(Astro.url);
 			<slot />
 		</main>
 		<Footer lang={lang} />
-		<!-- Sticky 'Book Now' Button (Mobile Only) -->
-		<div class="fixed bottom-4 left-4 z-50 md:hidden pointer-events-none">
-			<a id="book-now-btn" href={`/${lang}/contact`} class="bg-bordeaux hover:bg-bordeaux-dark text-white font-bold py-3 px-6 rounded-full transition duration-300 shadow-lg transform hover:scale-105 text-sm uppercase tracking-wide pointer-events-auto block border-2 border-transparent">
-				{lang === 'nl' ? 'Nu Boeken' : (lang === 'de' ? 'Jetzt Buchen' : 'Book Now')}
-			</a>
-		</div>
+		{!hideBookingButtons && (
+			<!-- Sticky 'Book Now' Button (Mobile Only) -->
+			<div class="fixed bottom-4 left-4 z-50 md:hidden pointer-events-none">
+				<a id="book-now-btn" href={`/${lang}/contact`} class="bg-bordeaux hover:bg-bordeaux-dark text-white font-bold py-3 px-6 rounded-full transition duration-300 shadow-lg transform hover:scale-105 text-sm uppercase tracking-wide pointer-events-auto block border-2 border-transparent">
+					{lang === 'nl' ? 'Nu Boeken' : (lang === 'de' ? 'Jetzt Buchen' : 'Book Now')}
+				</a>
+			</div>
+		)}
 
         <Atmosphere />
-        <WhatsAppButton />
+        {!hideBookingButtons && <WhatsAppButton />}
 
         <script>
             import Lenis from 'lenis'
