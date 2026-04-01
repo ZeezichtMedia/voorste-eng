@@ -55,14 +55,13 @@ const t = content[lang as keyof typeof content] || content.nl;
 
       <!-- Booking Widget -->
       <ScrollReveal animation="fade-up" duration={1} delay={0.2}>
-        <div class="bg-white rounded-sm shadow-xl border border-stone-100 overflow-hidden">
+        <div class="bg-white rounded-sm shadow-xl border border-stone-100">
           <iframe
             src="https://www.bedandbreakfast.nl/ibook/v2/78015/nl/red/transparent"
             width="100%"
-            height="780"
-            frameborder="0"
             allowtransparency="true"
-            style="border: none; display: block;"
+            class="w-full block"
+            style="border: none; height: clamp(900px, 150vw, 1400px);"
           ></iframe>
         </div>
       </ScrollReveal>
