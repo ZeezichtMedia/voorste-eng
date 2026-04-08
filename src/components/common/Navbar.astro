@@ -142,16 +142,16 @@ const currentNav = navItems[lang] || navItems.nl;
   </div>
 
   <!-- Mobile Nav Links -->
-  <div class="flex-grow py-4 px-6">
-    <div class="flex flex-col space-y-0">
+  <div class="flex-grow py-6 px-6">
+    <div class="flex flex-col space-y-1">
       {currentNav.map((item) => (
         <div class="border-b border-dune-sand/10 last:border-0">
           {item.children ? (
              <div>
                 <button
-                  class="accordion-trigger flex justify-between items-center w-full py-2.5 text-left group"
+                  class="accordion-trigger flex justify-between items-center w-full py-3 text-left group"
                 >
-                  <span class="text-lg font-heading font-light text-slate-800 group-hover:text-bordeaux transition-colors">{item.name}</span>
+                  <span class="text-xl font-heading font-light text-slate-800 group-hover:text-bordeaux transition-colors">{item.name}</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -164,7 +164,7 @@ const currentNav = navItems[lang] || navItems.nl;
                   </svg>
                 </button>
 
-                <div class="hidden pl-4 pb-1 space-y-1">
+                <div class="hidden pl-4 pb-2 space-y-2">
                    {item.children.map((child) => (
                      <a
                        href={child.href}
@@ -178,7 +178,7 @@ const currentNav = navItems[lang] || navItems.nl;
           ) : (
             <a
               href={item.href}
-              class="block py-2.5 text-lg font-heading font-light text-slate-800 hover:text-bordeaux transition-colors"
+              class="block py-3 text-xl font-heading font-light text-slate-800 hover:text-bordeaux transition-colors"
             >
               {item.name}
             </a>
@@ -191,9 +191,9 @@ const currentNav = navItems[lang] || navItems.nl;
   <!-- Mobile Language Selector & Footer Info -->
   <div class="p-6 border-t border-dune-sand/10 bg-white">
       <div class="flex items-center space-x-6 mb-4">
-          <a href="/nl" class={`text-base font-bold transition-colors ${lang === 'nl' ? 'text-bordeaux underline underline-offset-4' : 'text-slate-400'}`}>NL</a>
-          <a href="/en" class={`text-base font-bold transition-colors ${lang === 'en' ? 'text-bordeaux underline underline-offset-4' : 'text-slate-400'}`}>EN</a>
-          <a href="/de" class={`text-base font-bold transition-colors ${lang === 'de' ? 'text-bordeaux underline underline-offset-4' : 'text-slate-400'}`}>DE</a>
+          <a href="/nl" class={`text-lg font-bold transition-colors ${lang === 'nl' ? 'text-bordeaux underline underline-offset-4' : 'text-slate-400'}`}>NL</a>
+          <a href="/en" class={`text-lg font-bold transition-colors ${lang === 'en' ? 'text-bordeaux underline underline-offset-4' : 'text-slate-400'}`}>EN</a>
+          <a href="/de" class={`text-lg font-bold transition-colors ${lang === 'de' ? 'text-bordeaux underline underline-offset-4' : 'text-slate-400'}`}>DE</a>
       </div>
       <p class="text-xs text-slate-400 font-light">
           Boerderij Voorste Eng · Edeseweg 2, Otterlo
