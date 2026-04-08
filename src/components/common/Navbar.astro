@@ -15,8 +15,8 @@ const navItems = {
     },
     { name: 'Omgeving', href: '/nl/omgeving' },
     { name: 'Gallerij', href: '/nl/gallerij' },
-    { name: 'Contact', href: '/nl/contact' },
     { name: 'Boeken', href: '/nl/boeken' },
+    { name: 'Contact', href: '/nl/contact' },
   ],
   en: [
     { name: 'Home', href: '/en' },
@@ -30,8 +30,8 @@ const navItems = {
     },
     { name: 'Surroundings', href: '/en/omgeving' },
     { name: 'Gallery', href: '/en/gallerij' },
-    { name: 'Contact', href: '/en/contact' },
     { name: 'Book', href: '/en/boeken' },
+    { name: 'Contact', href: '/en/contact' },
   ],
   de: [
     { name: 'Start', href: '/de' },
@@ -45,8 +45,8 @@ const navItems = {
     },
     { name: 'Umgebung', href: '/de/omgeving' },
     { name: 'Galerie', href: '/de/gallerij' },
-    { name: 'Kontakt', href: '/de/contact' },
     { name: 'Buchen', href: '/de/boeken' },
+    { name: 'Kontakt', href: '/de/contact' },
   ]
 };
 
@@ -142,33 +142,33 @@ const currentNav = navItems[lang] || navItems.nl;
   </div>
 
   <!-- Mobile Nav Links -->
-  <div class="flex-grow overflow-y-auto py-8 px-6">
-    <div class="flex flex-col space-y-2">
+  <div class="flex-grow py-4 px-6">
+    <div class="flex flex-col space-y-0">
       {currentNav.map((item) => (
-        <div class="border-b border-dune-sand/10 last:border-0 pb-2">
+        <div class="border-b border-dune-sand/10 last:border-0">
           {item.children ? (
              <div>
-                <button 
-                  class="accordion-trigger flex justify-between items-center w-full py-3 text-left group"
+                <button
+                  class="accordion-trigger flex justify-between items-center w-full py-2.5 text-left group"
                 >
-                  <span class="text-2xl font-heading font-light text-slate-800 group-hover:text-bordeaux transition-colors">{item.name}</span>
-                  <svg 
-                    xmlns="http://www.w3.org/2000/svg" 
-                    fill="none" 
-                    viewBox="0 0 24 24" 
-                    stroke-width="1.5" 
-                    stroke="currentColor" 
-                    class="accordion-icon w-6 h-6 text-slate-400 transition-transform duration-300"
+                  <span class="text-lg font-heading font-light text-slate-800 group-hover:text-bordeaux transition-colors">{item.name}</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="accordion-icon w-5 h-5 text-slate-400 transition-transform duration-300"
                   >
                     <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                   </svg>
                 </button>
-                
-                <div class="hidden pl-4 pb-2 space-y-3">
+
+                <div class="hidden pl-4 pb-1 space-y-1">
                    {item.children.map((child) => (
                      <a
                        href={child.href}
-                       class="block text-lg font-heading font-light text-slate-500 hover:text-bordeaux py-2 border-l-2 border-transparent hover:border-bordeaux pl-3 transition-all"
+                       class="block text-base font-heading font-light text-slate-500 hover:text-bordeaux py-1.5 border-l-2 border-transparent hover:border-bordeaux pl-3 transition-all"
                      >
                        {child.name}
                      </a>
@@ -178,7 +178,7 @@ const currentNav = navItems[lang] || navItems.nl;
           ) : (
             <a
               href={item.href}
-              class="block py-3 text-2xl font-heading font-light text-slate-800 hover:text-bordeaux transition-colors"
+              class="block py-2.5 text-lg font-heading font-light text-slate-800 hover:text-bordeaux transition-colors"
             >
               {item.name}
             </a>
@@ -189,15 +189,14 @@ const currentNav = navItems[lang] || navItems.nl;
   </div>
 
   <!-- Mobile Language Selector & Footer Info -->
-  <div class="p-8 border-t border-dune-sand/10 bg-white">
-      <div class="flex items-center space-x-6 mb-8">
-          <a href="/nl" class={`text-lg font-bold transition-colors ${lang === 'nl' ? 'text-bordeaux underline underline-offset-4' : 'text-slate-400'}`}>NL</a>
-          <a href="/en" class={`text-lg font-bold transition-colors ${lang === 'en' ? 'text-bordeaux underline underline-offset-4' : 'text-slate-400'}`}>EN</a>
-          <a href="/de" class={`text-lg font-bold transition-colors ${lang === 'de' ? 'text-bordeaux underline underline-offset-4' : 'text-slate-400'}`}>DE</a>
+  <div class="p-6 border-t border-dune-sand/10 bg-white">
+      <div class="flex items-center space-x-6 mb-4">
+          <a href="/nl" class={`text-base font-bold transition-colors ${lang === 'nl' ? 'text-bordeaux underline underline-offset-4' : 'text-slate-400'}`}>NL</a>
+          <a href="/en" class={`text-base font-bold transition-colors ${lang === 'en' ? 'text-bordeaux underline underline-offset-4' : 'text-slate-400'}`}>EN</a>
+          <a href="/de" class={`text-base font-bold transition-colors ${lang === 'de' ? 'text-bordeaux underline underline-offset-4' : 'text-slate-400'}`}>DE</a>
       </div>
       <p class="text-xs text-slate-400 font-light">
-          Boerderij Voorste Eng<br>
-          Edeseweg 2, Otterlo
+          Boerderij Voorste Eng · Edeseweg 2, Otterlo
       </p>
   </div>
 </div>
